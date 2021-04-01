@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="stylequiz.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="pictures/logo.png">
+    <title>Racism and Microaggresions</title>
+    <meta name="author" content="Isabel Reinema" />
+    <meta name="description" content="This website is about the topics rcism ans Microaggresions." />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="logic.js"></script>
+</head>
+
+<body class="bgimg" onload="variablesquiz1">
+    <div class="bildrechts">
+        <img src="pictures/bortfeldwappen.jpg" width="124" height="139" alt="Image could not be loaded. Showing: Das Wappen von Bortfeld">
+    </div>
+    <div class="bildlinks">
+        <img src="pictures/racismlogo.png" width="140" height="140" alt="Image could not be loaded. Showing: Hands of different color">
+    </div>
+    <div class="heading">
+        <h1>Racism and Microaggresions</h1>
+        <h2>&mdash; Huge topics in our society &mdash;</h2>
+    </div>
+    <div class="content">
+        <p><a href="index.html">Startseite</a></p>
+        <p><a href="globalisierung.html">Globalisierung: Was ist das?</a></p>
+        <p><a href="post.html">Post</a></p>
+        <p><a href="telefon.html">Telefonie</a></p>
+        <p><a href="funk.html">Rundfunk und Fernsehen</a></p>
+        <p><a href="internet.html">Internet</a></p>
+        <p><a href="mittellandkanal.html">Mittellandkanal</a></p>
+        <p><a href="bank.html">Bankautomat</a></p>
+        <p><a href="autohaus.html">Das Autohaus Opitz</a></p>
+        <p><a href="np.html">Supermarkt &mdash; NP</a></p>
+    </div>
+    <div class="schmuckbild1">
+        <img src="pictures/schmuckglobalisierung.jpg" width="290" height="270" alt="Bild konnte nicht geladen werden. Zu sehen: Weltkugel mit leuchtendem Gloablisierungsnetz" />
+        <img class="schmuckbild2" src="pictures/wortwolkeglobalisierung.jpg" width="290" height="290" alt="Bild konnte nicht geladen werden. Zu sehen: Wortwolke zum Thema Globalisierung" />
+    </div>
+    <div class="article">
+        <h3>Willkommen in Bortfeld</h3>
+        <div id="box" onload="status">
+            <div class="richtige">
+                <p id="r0"><b>0</b> Fragen von <b>10</b> richtig</p>
+                <p id="r1"><b>1</b> Frage von <b>10</b> richtig</p>
+                <p id="r2"><b>2</b> Fragen von <b>10</b> richtig</p>
+                <p id="r3"><b>3</b> Fragen von <b>10</b> richtig</p>
+                <p id="r4"><b>4</b> Fragen von <b>10</b> richtig</p>
+                <p id="r5"><b>5</b> Fragen von <b>10</b> richtig</p>
+                <p id="r6"><b>6</b> Fragen von <b>10</b> richtig</p>
+                <p id="r7"><b>7</b> Fragen von <b>10</b> richtig</p>
+                <p id="r8"><b>8</b> Fragen von <b>10</b> richtig</p>
+                <p id="r9"><b>9</b> Fragen von <b>10</b> richtig</p>
+                <p id="r10"><b>10</b> Fragen von <b>10</b> richtig</p>
+            </div>
+            <div class="frage">
+                <p id="f1">Frage <b>1</b> von <b>10</b></p>
+                <p id="f2">Frage <b>2</b> von <b>10</b></p>
+                <p id="f3">Frage <b>3</b> von <b>10</b></p>
+                <p id="f4">Frage <b>4</b> von <b>10</b></p>
+                <p id="f5">Frage <b>5</b> von <b>10</b></p>
+                <p id="f6">Frage <b>6</b> von <b>10</b></p>
+                <p id="f7">Frage <b>7</b> von <b>10</b></p>
+                <p id="f8">Frage <b>8</b> von <b>10</b></p>
+                <p id="f9">Frage <b>9</b> von <b>10</b></p>
+                <p id="f10">Frage <b>10</b> von <b>10</b></p>
+            </div>
+            <div class="auswertung">
+                <p id="correct">You're right!</p>
+                <p id="false">You're wrong!</p>
+                <p id="skip">You skipped!</p>
+            </div>
+            <div class="question">
+                <p id="q1"><b>Frage</b></p>
+                <p id="q2"><b>Frage</b></p>
+                <p id="q3"><b>Frage</b></p>
+                <p id="q4"><b>Frage</b></p>
+                <p id="q5"><b>Frage</b></p>
+                <p id="q6"><b>Frage</b></p>
+                <p id="q7"><b>Frage</b></p>
+                <p id="q8"><b>Frage</b></p>
+                <p id="q9"><b>Frage</b></p>
+                <p id="q10"><b>Frage</b></p>
+            </div>
+            <div class="answers">
+
+                <button id="af11"><b>A</b> Antwort</button>
+                <button id="ac1"><b>B</b> Antwort</button>
+                <button id="af21"><b>C</b> Antwort</button>
+
+                <button id="ac2"><b>A</b> Antwort</button>
+                <button id="af12"><b>B</b> Antwort</button>
+                <button id="af22"><b>C</b> Antwort</button>
+
+                <button id="af13"><b>A</b> Antwort</button>
+                <button id="ac3"><b>B</b> Antwort</button>
+                <button id="af23"><b>C</b> Antwort</button>
+
+                <button id="af14"><b>A</b> Antwort</button>
+                <button id="af24"><b>B</b> Antwort</button>
+                <button id="ac4"><b>C</b> Antwort</button>
+
+                <button id="af15"><b>A</b> Antwort</button>
+                <button id="af25"><b>B</b> Antwort</button>
+                <button id="ac5"><b>C</b> Antwort</button>
+
+                <button id="ac6"><b>A</b> Antwort</button>
+                <button id="af16"><b>B</b> Antwort</button>
+                <button id="af26"><b>C</b> Antwort</button>
+
+                <button id="af17"><b>A</b> Antwort</button>
+                <button id="af27"><b>B</b> Antwort</button>
+                <button id="ac7"><b>C</b> Antwort</button>
+
+                <button id="af18"><b>A</b> Antwort</button>
+                <button id="ac8"><b>B</b> Antwort</button>
+                <button id="af28"><b>C</b> Antwort</button>
+
+                <button id="ac9"><b>A</b> Antwort</button>
+                <button id="af19"><b>B</b> Antwort</button>
+                <button id="af29"><b>C</b> Antwort</button>
+
+                <button id="ac10"><b>A</b> Antwort</button>
+                <button id="af110"><b>B</b> Antwort</button>
+                <button id="af210"><b>C</b> Antwort</button>
+            </div>
+            <div class=explanation>
+                <div id=e1>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e2>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e3>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e4>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e5>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e6>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e7>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e8>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e9>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e10>
+                    <p>Erklärung</p>
+                </div>
+            </div>
+            <div class=quizbuttons>
+                <button id=skipp>SKIP</button>
+                <button id=weiter>WEITER</button>
+            </div>
+            <div id="endscreen">
+                <p id=glückwunsch>Herzlichen Glückwunsch!</p>
+                <p id=p1>Sie haben 1 von 10 Fragen richtig beantwortet!</p>
+                <p id=p2>Sie haben 2 von 10 Fragen richtig beantwortet!</p>
+                <p id=p3>Sie haben 3 von 10 Fragen richtig beantwortet!</p>
+                <p id=p4>Sie haben 4 von 10 Fragen richtig beantwortet!</p>
+                <p id=p5>Sie haben 5 von 10 Fragen richtig beantwortet!</p>
+                <p id=p6>Sie haben 6 von 10 Fragen richtig beantwortet!</p>
+                <p id=p7>Sie haben 7 von 10 Fragen richtig beantwortet!</p>
+                <p id=p8>Sie haben 8 von 10 Fragen richtig beantwortet!</p>
+                <p id=p9>Sie haben 9 von 10 Fragen richtig beantwortet!</p>
+                <p id=p10>Sie haben 10 von 10 Fragen richtig beantwortet!</p>
+                <button id=playagain>Play again</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="bottom">
+            <p><a class="impressum" href="impressum.html">Impressum</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
