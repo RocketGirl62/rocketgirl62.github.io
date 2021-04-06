@@ -1,5 +1,5 @@
 function variabeln() {
-    sessionStorage.setItem('load', 1);
+    var load = 1;
     verschwinden(load);
 }
 
@@ -16,6 +16,6 @@ function verschwinden(load) {
 }
 
 function click() {
-    sessionStorage.setItem('load', 0);
+    var load = 0;
     verschwinden(load);
 }
