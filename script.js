@@ -5,11 +5,13 @@ function variabeln() {
 
 function verschwinden(load) {
     if (load == 1) {
-        document.getElementById(button1).classList.add('visible')
-        document.getElementById(button1).classList.remove('nonvisible')
+        document.getElementById(button1).classList.remove('nonvisible');
+        document.getElementById(button1).classList.add('visible');
+        
     } else {
-        document.getElementById(button1).classList.add('nonvisible')
-        document.getElementById(button1).classList.remove('visible')
+        document.getElementById(button1).classList.remove('visible');
+        document.getElementById(button1).classList.add('nonvisible');
+        
     }
 }
 
