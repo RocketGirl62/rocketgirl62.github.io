@@ -1,6 +1,6 @@
 var load = 1;
 
-function variabeln(load) {
+function variabeln() {
     var load = 1;
     verschwinden(load);
 }
@@ -17,7 +17,7 @@ function verschwinden(load) {
     }
 }
 
-function click(load) {
+function click() {
     var load = 0;
     verschwinden(load);
 }
