@@ -1,12 +1,12 @@
 var load = 1;
 
-function variabeln() {
+function variabeln(load) {
     var load = 1;
     verschwinden(load);
 }
 
 function verschwinden(load) {
-    if (load == 1) {
+    if (load === 1) {
         document.getElementById(button1).classList.remove('nonvisible');
         document.getElementById(button1).classList.add('visible');
         
@@ -17,7 +17,7 @@ function verschwinden(load) {
     }
 }
 
-function click() {
+function click(load) {
     var load = 0;
     verschwinden(load);
 }
