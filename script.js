@@ -1,3 +1,5 @@
+var load = 1;
+
 function variabeln() {
     var load = 1;
     verschwinden(load);
