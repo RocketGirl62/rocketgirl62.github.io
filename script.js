@@ -2,6 +2,7 @@ var load = 1;
 
 function variabeln() {
     var load = 1;
+    document.getElementById(button1).className('visible');
     verschwinden(load);
 }
 
