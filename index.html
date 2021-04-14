@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="stylequiz.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="pictures/logo.png">
+    <title>Racism and Microaggresions</title>
+    <meta name="author" content="Isabel Reinema" />
+    <meta name="description" content="This website is about the topics rcism ans Microaggresions." />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <script src="logic.js"></script>
+    <script src="cookies.js"></script>
+    <script src="content.js"></script>
+</head>
+
+<body class="bgimg" onload="starting();cookieproove();status();cookieproovecontent();dreieckset()">
+    <div class="bildrechts">
+        <img src="pictures/racism.png" width="280" height="140" alt="Image could not be loaded. Showing: Stop Racism">
+    </div>
+    <div class="bildlinks">
+        <img src="pictures/racismlogo.png" width="140" height="140" alt="Image could not be loaded. Showing: Hands of different color">
+    </div>
+    <div class="heading">
+        <h1>Racism and Microaggresions</h1>
+        <h2>&mdash; Huge topics in our society &mdash;</h2>
+    </div>
+    <div class="content">
+        <p><a href="">Homepage</a></p>
+        <input id="dreieckr" type="image" onclick="dreiecksetstatus1()" src="pictures/dreieckrechts.png" width="15" height="15" alt="Button">
+        <input id="dreiecku" type="image" onclick="dreiecksetstatus0()" src="pictures/dreieckunten.png" width="15" height="15" alt="Button">
+        <p class="plusunterthemen"><a href="">Racism</a></p>
+        <div id="unterpunkte">
+            <p class="unterthema">What is racism?</p>
+            <p class="unterthema">Where is racism in today's society?</p>
+            <p class="unterthema">Forms of racism</p>
+            <p class="unterthema">Racism in the past</p>
+            <p class="unterthema"></p>
+            <p class="unterthema">What can we do?</p>
+            <p class="unterthema">Quiz</p>
+            <p class="unterthema">Summary</p>
+        </div>
+        <p><a href="">Microaggressions</a></p>
+        <p><a href="">What are microaggressions</a></p>
+        <p><a href="">Microassults</a></p>
+        <p><a href="">Microinvalidations</a></p>
+        <p><a href="">What can we do?</a></p>
+        <p><a href="">Quiz</a></p>
+        <p><a href="">Summary</a></p>
+        <p><a href="">Novel: The color game</a></p>
+    </div>
+    <div class="schmuckbild1">
+        <img src="pictures/worldhands.png" width="290" height="290" alt="Image could not be loaded. Showing: Hands of different color over a world" />
+        <img class="schmuckbild2" src="pictures/wordcloudracism.jpg" width="290" height="290" alt="Image could not be loaded. Showing: A wordcloud about racism and microaggressions" />
+    </div>
+    <div class="article">
+        <h3>Quiz</h3>
+        <div id="box">
+            <div class="richtige">
+                <p id="r0"><b>0</b> Fragen von <b>10</b> richtig</p>
+                <p id="r1"><b>1</b> Frage von <b>10</b> richtig</p>
+                <p id="r2"><b>2</b> Fragen von <b>10</b> richtig</p>
+                <p id="r3"><b>3</b> Fragen von <b>10</b> richtig</p>
+                <p id="r4"><b>4</b> Fragen von <b>10</b> richtig</p>
+                <p id="r5"><b>5</b> Fragen von <b>10</b> richtig</p>
+                <p id="r6"><b>6</b> Fragen von <b>10</b> richtig</p>
+                <p id="r7"><b>7</b> Fragen von <b>10</b> richtig</p>
+                <p id="r8"><b>8</b> Fragen von <b>10</b> richtig</p>
+                <p id="r9"><b>9</b> Fragen von <b>10</b> richtig</p>
+                <p id="r10"><b>10</b> Fragen von <b>10</b> richtig</p>
+            </div>
+            <div class="frage">
+                <p id="f1">Frage <b>1</b> von <b>10</b></p>
+                <p id="f2">Frage <b>2</b> von <b>10</b></p>
+                <p id="f3">Frage <b>3</b> von <b>10</b></p>
+                <p id="f4">Frage <b>4</b> von <b>10</b></p>
+                <p id="f5">Frage <b>5</b> von <b>10</b></p>
+                <p id="f6">Frage <b>6</b> von <b>10</b></p>
+                <p id="f7">Frage <b>7</b> von <b>10</b></p>
+                <p id="f8">Frage <b>8</b> von <b>10</b></p>
+                <p id="f9">Frage <b>9</b> von <b>10</b></p>
+                <p id="f10">Frage <b>10</b> von <b>10</b></p>
+            </div>
+            <div class="auswertung">
+                <p id="correct">You're right!</p>
+                <p id="false">You're wrong!</p>
+                <p id="skip">You skipped!</p>
+            </div>
+            <div class="question">
+                <p id="q1"><b>Frage</b></p>
+                <p id="q2"><b>Frage</b></p>
+                <p id="q3"><b>Frage</b></p>
+                <p id="q4"><b>Frage</b></p>
+                <p id="q5"><b>Frage</b></p>
+                <p id="q6"><b>Frage</b></p>
+                <p id="q7"><b>Frage</b></p>
+                <p id="q8"><b>Frage</b></p>
+                <p id="q9"><b>Frage</b></p>
+                <p id="q10"><b>Frage</b></p>
+            </div>
+            <div class="answers">
+
+                <button id="af11" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="ac1" onclick="buttoncorrect()" disabled="false"><b>B</b> Antwort</button>
+                <button id="af21" onclick="buttonfalse()"><b>C</b> Antwort</button>
+
+                <button id="ac2" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af12" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af22" onclick="buttonfalse()"><b>C</b> Antwort</button>
+
+                <button id="af13" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="ac3" onclick="buttoncorrect()" disabled="false"><b>B</b> Antwort</button>
+                <button id="af23" onclick="buttonfalse()"><b>C</b> Antwort</button>
+
+                <button id="af14" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="af24" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="ac4" onclick="buttoncorrect()" disabled="false"><b>C</b> Antwort</button>
+
+                <button id="af15" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="af25" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="ac5" onclick="buttoncorrect()" disabled="false"><b>C</b> Antwort</button>
+
+                <button id="ac6" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af16" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af26" onclick="buttonfalse()"><b>C</b> Antwort</button>
+
+                <button id="af17" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="af27" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="ac7" onclick="buttoncorrect()" disabled="false"><b>C</b> Antwort</button>
+
+                <button id="af18" onclick="buttonfalse()"><b>A</b> Antwort</button>
+                <button id="ac8" onclick="buttoncorrect()" disabled="false"><b>B</b> Antwort</button>
+                <button id="af28" onclick="buttonfalse()"><b>C</b> Antwort</button>
+
+                <button id="ac9" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af19" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af29" onclick="buttonfalse()"><b>C</b> Antwort</button>
+
+                <button id="ac10" onclick="buttoncorrect()" disabled="false"><b>A</b> Antwort</button>
+                <button id="af110" onclick="buttonfalse()"><b>B</b> Antwort</button>
+                <button id="af210" onclick="buttonfalse()"><b>C</b> Antwort</button>
+            </div>
+            <div class=explanation>
+                <div id=e1>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e2>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e3>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e4>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e5>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e6>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e7>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e8>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e9>
+                    <p>Erklärung</p>
+                </div>
+                <div id=e10>
+                    <p>Erklärung</p>
+                </div>
+            </div>
+            <div class=quizbuttons>
+                <button id=skipp onclick="buttonskipp()">SKIP</button>
+                <button id=weiter onclick="buttonweiter()">WEITER</button>
+            </div>
+            <div id="endscreen">
+                <p id=glückwunsch>Herzlichen Glückwunsch!</p>
+                <p id=p0>Sie haben 0 von 10 Fragen richtig beantwortet!</p>
+                <p id=p1>Sie haben 1 von 10 Fragen richtig beantwortet!</p>
+                <p id=p2>Sie haben 2 von 10 Fragen richtig beantwortet!</p>
+                <p id=p3>Sie haben 3 von 10 Fragen richtig beantwortet!</p>
+                <p id=p4>Sie haben 4 von 10 Fragen richtig beantwortet!</p>
+                <p id=p5>Sie haben 5 von 10 Fragen richtig beantwortet!</p>
+                <p id=p6>Sie haben 6 von 10 Fragen richtig beantwortet!</p>
+                <p id=p7>Sie haben 7 von 10 Fragen richtig beantwortet!</p>
+                <p id=p8>Sie haben 8 von 10 Fragen richtig beantwortet!</p>
+                <p id=p9>Sie haben 9 von 10 Fragen richtig beantwortet!</p>
+                <p id=p10>Sie haben 10 von 10 Fragen richtig beantwortet!</p>
+                <button id=playagain onclick="buttonplayagain()">Play again</button>
+            </div>
+        </div>
+        <!-- hier eine pdf zum download anbieten -->
+        <div class="pdfdownload">
+            <a class="pdfdownloadicon" href="Hi.pdf" download target="_blank">
+                <img src="pictures/pdfdownloadicon.png" width="20" height="27" alt="Download PDF">
+            </a>
+            <a class="pdfdownloadtext" href="Hi.pdf" download target="_blank">
+            PDF Download
+            </a>
+        </div>
+    </div>
+    <footer>
+        <div class="bottom">
+            <p><a class="impressum" href="impressum.html">Impressum</a></p>
+        </div>
+    </footer>
+    <div id="cookieconsent">
+        <h4 id="cookieheading">I like Cookies!</h4>
+        <p id="cookietext">We use Cookies to make our website work. With the use of this website you allow Cookies.
+        </p>
+        <button id="cookiebutton" onclick="allowed();variablesquiz1()">Accept!</button>
+    </div>
+</body>
+
+</html>
