@@ -1,0 +1,189 @@
+﻿html {
+    font-family: 'Rubik', sans-serif;
+}
+
+.bgimg {
+    background-image: url("pictures/background.jpg");
+    background-attachment: fixed;
+    overflow-x: auto;
+    overflow-y: auto;
+    min-height: 100%;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.heading {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    margin: 0px 0px 0px 0px;
+    background-color: #000066;
+    line-height: 100%;
+    font-size: 20px;
+    color: #f7f7f7;
+}
+
+.bildrechts {
+    float: right;
+    margin: 10px 25px 0px 10px;
+    background-color: #f7f7f7;
+}
+
+.bildlinks {
+    float: left;
+    margin: 10px 10px 0px 25px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.article {
+    padding: 10px 25px 10px 25px;
+    margin: 20px 25% 20px 25%;
+    position: center;
+    background-color: #f7f7f7;
+}
+
+.articlepicture {
+    padding: 0px 20% 0px 20%;
+}
+
+.articlepicture2 {
+    padding: 0px 5% 0px 5%;
+}
+
+p {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 20px 0px 10px 0px;
+}
+
+h4 {
+    font-size: 18px;
+    margin: 20px 0px 0px 0px;
+}
+
+a {
+    color: royalblue;
+}
+
+.liste {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0px 0px 0px;
+    font-size: 18px;
+}
+
+.absatz {
+    margin: 5px 0px 5px 0px;
+}
+
+.bottom {
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background-color: #000066;
+    color: #f7f7f7;
+    margin: 10px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
+}
+
+.impressum {
+    color: #f7f7f7;
+}
+
+.content {
+    float: left;
+    width: 15%;
+    margin: 20px 15px 20px 0px;
+    padding: 10px 25px 10px 25px;
+    background-color: #f7f7f7;
+}
+
+.schmuckbild1 {
+    float: right;
+    width: 15%;
+    margin: 20px 0px 20px 15px;
+    padding: 20px 25px 20px 25px;
+    background-color: #f7f7f7;
+}
+
+.schmuckbild2 {
+    margin: 20px 0px 0px 0px;
+}
+
+.pdfdownloadicon {
+    text-decoration: none;
+}
+
+.pdfdownloadintroduction {
+    margin: 10px 0px 5px 0px;
+}
+
+.impressumabsatz {
+    margin: 5px 0px 5px 0px;
+}
+
+.invisible {
+    display: none;
+}
+
+#cookieconsent {
+    width: 20%;
+    background-color: #333333;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 10px 10px 10px;
+    font-family: inherit;
+    color: #f7f7f7;
+}
+
+#cookieheading {
+    font-size: 28px;
+    margin: 10px 20px 10px 20px;
+}
+
+#cookietext {
+    font-size: 20px;
+    margin: 10px 20px 10px 20px;
+}
+
+#cookiebutton {
+    padding: 5px 20px 5px 20px;
+    margin: 10px 20px 10px 20px;
+    transition-duration: 0.4s;
+    background-color: #00ff00;
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    color: #333333;
+    font-size: 20px;
+}
+
+#cookiebutton:hover {
+    background-color: #00cc00;
+    color: #f7f7f7;
+}
+
+#dreieckr,
+#dreiecku {
+    float: left;
+    padding: 2px 5px 2px 5px;
+}
+
+.unterthema {
+    margin: 2px 0px 2px 20px;
+}
+
+.plusunterthemen {
+    margin: 20px 0px 0px 0px;
+}
