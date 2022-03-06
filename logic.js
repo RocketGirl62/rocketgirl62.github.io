@@ -853,6 +853,11 @@ function logicsubjects(i) {
         sessionStorage.setItem('chemie_w', false)
         sessionStorage.setItem('informatik_w', false)
         sessionStorage.setItem('biologie_w', false)
+        // Für leistugs Kurse
+        sessionStorage.setItem('physik_wl', false)
+        sessionStorage.setItem('chemie_wl', false)
+        sessionStorage.setItem('informatik_wl', false)
+        sessionStorage.setItem('biologie_wl', false)
       }
       //Falls ein Bereich eins ist, darf dieser auch nicht mehr gewählt werden, da A,B,C min. 1 mal vertreten sein muss.
       if (sessionStorage.getItem(Anzahlen[h][1]) == '1') {
@@ -877,6 +882,7 @@ function logicsubjects(i) {
       sessionStorage.setItem('w[1]', true)
       sessionStorage.setItem('w_nk', true)
       sessionStorage.setItem('geschichte_w', true)
+      sessionStorage.setItem('geschichte_wl', true)
     }
     if (parseInt(sessionStorage.getItem('C_anzahl')) == 1 && parseInt(sessionStorage.getItem('kernfaecher')) == 1) {
       sessionStorage.setItem('musik_w', false)
@@ -885,6 +891,16 @@ function logicsubjects(i) {
       sessionStorage.setItem('biologie_w', false)
       sessionStorage.setItem('physik_w', false)
       sessionStorage.setItem('informatik_w', false)
+
+      // Leistugs Kurse
+      sessionStorage.setItem('musik_wl', false)
+      sessionStorage.setItem('kunst_wl', false)
+      sessionStorage.setItem('chemie_wl', false)
+      sessionStorage.setItem('biologie_wl', false)
+      sessionStorage.setItem('physik_wl', false)
+      sessionStorage.setItem('informatik_wl', false)
+
+      // 
       sessionStorage.setItem('w[1]', true)
     }
   }
@@ -904,12 +920,25 @@ function logicsubjects(i) {
       sessionStorage.setItem('biologie_w', false)
       sessionStorage.setItem('physik_w', false)
       sessionStorage.setItem('informatik_w', false)
+
+      // Prüfungsfächer
+
+      sessionStorage.setItem('chemie_wl', false)
+      sessionStorage.setItem('biologie_wl', false)
+      sessionStorage.setItem('physik_wl', false)
+      sessionStorage.setItem('informatik_wl', false)
+
       for (let i = 1; i < 6; i++) {
         if (sessionStorage.getItem("pfach" + i) == 'Englisch' || sessionStorage.getItem("pfach" + i) == 'Spanisch' || sessionStorage.getItem("pfach" + i) == 'Latein' || sessionStorage.getItem("pfach" + i) == 'Französisch') {
           sessionStorage.setItem('englisch_w', false)
           sessionStorage.setItem('latein_w', false)
           sessionStorage.setItem('spanisch_w', false)
           sessionStorage.setItem('franzoesisch_w', false)
+
+          sessionStorage.setItem('englisch_wl', false)
+          sessionStorage.setItem('latein_wl', false)
+          sessionStorage.setItem('spanisch_wl', false)
+          sessionStorage.setItem('franzoesisch_wl', false)
         }
       }
     }
@@ -930,6 +959,13 @@ function logicsubjects(i) {
     sessionStorage.setItem('physik_w', false)
     sessionStorage.setItem('informatik_w', false)
     sessionStorage.setItem('chemie_w', false)
+
+    sessionStorage.setItem('musik_wl', false)
+    sessionStorage.setItem('kunst_wl', false)
+    sessionStorage.setItem('biologie_wl', false)
+    sessionStorage.setItem('physik_wl', false)
+    sessionStorage.setItem('informatik_wl', false)
+    sessionStorage.setItem('chemie_wl', false)
   }
 }
 //Teil der Logik, der prüft, welche Fächer in der nächsten Stufe noch wählbar sind (ruft die beiden folgenden Methoden dafür auf)
@@ -1364,6 +1400,7 @@ function checking_for_informatik(j, help_informatik) {
     return false
   }
 }
+/*
 function buttons_informatik(help_informatik) {
   if (help_informatik == true) {
     disable_fachbutton('informatikja')
@@ -1374,6 +1411,7 @@ function buttons_informatik(help_informatik) {
     document.getElementById("informatikne.label").style.opacity = '1'
   }
 }
+*/
 //Methode, welche grundlegende Dinge für die Grundkurse im mathematisch-naturwissenschaftlichen Profil regelt
 function mana() {
   for (let j = 1; j < 6; j++) {
@@ -1438,7 +1476,7 @@ function spra() {
   sport_gk()
   buttons_religion_wn()
   buttons_muku()
-  buttons_informatik(help_informatik)
+  //buttons_informatik(help_informatik)
   buttons_nw()
   if (parseInt(sessionStorage.getItem('counter_fs')) < 2) {
     var help_lang = false
@@ -1492,7 +1530,7 @@ function muku() {
   buttons_religion_wn()
   buttons_fs()
   buttons_nw()
-  buttons_informatik(help_informatik)
+  //buttons_informatik(help_informatik)
   if (sessionStorage.getItem('pfach1') == 'Musik') {
     disable_fachbutton('musik')
   } else if (sessionStorage.getItem('pfach1') == 'Kunst') {
@@ -1516,12 +1554,12 @@ function gese() {
     document.getElementById("physik.label").style.opacity = '1'
     document.getElementById("bio.label").style.opacity = '1'
     document.getElementById("chemie.label").style.opacity = '1'
-    document.getElementById("informatik.label").style.opacity = '1'
+    //document.getElementById("informatik.label").style.opacity = '1'
   } else if (parseInt(sessionStorage.getItem('counter_nw')) === 1) {
     disable_fachbutton('physik')
     disable_fachbutton('bio')
     disable_fachbutton('chemie')
-    disable_fachbutton('informatik')
+    //disable_fachbutton('informatik')
     document.getElementById("div_nw1").title = "Da bereits eine Naturwissenschaft gewählt wurde, muss hier nichts mehr gewählt werden"
     var help_informatik = false;
     var help_biologie = false;
@@ -1720,7 +1758,7 @@ function pflicht(j) {
 
 function enable_2fs_2nw() {
   if (((document.getElementById("spanisch").checked == true || document.getElementById("franzoesisch").checked == true || document.getElementById("latein").checked == true || document.getElementById("englisch").checked == true) || (document.getElementById("spanisch").disabled == true || document.getElementById("franzoesisch").disabled == true || document.getElementById("latein").disabled == true || document.getElementById("englisch").disabled == true))
-  && ((document.getElementById("chemie").checked == true || document.getElementById("bio").checked == true || document.getElementById("physik").checked == true || document.getElementById("informatik").checked == true) || (document.getElementById("chemie").disabled == true || document.getElementById("bio").disabled == true || document.getElementById("physik").disabled == true || document.getElementById("informatik").disabled == true))) {
+  && ((document.getElementById("chemie").checked == true || document.getElementById("bio").checked == true || document.getElementById("physik").checked == true /*|| document.getElementById("informatik").checked == true) */|| (document.getElementById("chemie").disabled == true || document.getElementById("bio").disabled == true || document.getElementById("physik").disabled == true /*|| document.getElementById("informatik").disabled == true*/)))) {
     enable_fachbutton('spanisch2')
     enable_fachbutton('franzoesisch2')
     enable_fachbutton('latein2')
@@ -1728,7 +1766,7 @@ function enable_2fs_2nw() {
     enable_fachbutton('chemie2')
     enable_fachbutton('bio2')
     enable_fachbutton('physik2')
-    enable_fachbutton('informatik2')
+    //enable_fachbutton('informatik2')
     for (let j = 1; j < 6; j++) {
       if (sessionStorage.getItem('pfach' + j) == 'Spanisch' || document.getElementById("spanisch").checked == true) {
         disable_fachbutton('latein2')
@@ -1757,9 +1795,11 @@ function enable_2fs_2nw() {
       if (sessionStorage.getItem('pfach' + j) == 'Physik' || document.getElementById("physik").checked == true) {
         disable_fachbutton('physik2')
       }
+      /*
       if (sessionStorage.getItem('pfach' + j) == 'Informatik' || document.getElementById("informatik").checked == true) {
         disable_fachbutton('informatik2')
       }
+      */
     }
   }
 }
@@ -2235,7 +2275,7 @@ function uncheck_reset_gk_gese() {
   document.getElementById("physik").checked = false
   document.getElementById("bio").checked = false
   document.getElementById("informatik").checked = false
-
+// Liebe Grüße
   document.getElementById("chemie2").checked = false
   document.getElementById("physik2").checked = false
   document.getElementById("bio2").checked = false
