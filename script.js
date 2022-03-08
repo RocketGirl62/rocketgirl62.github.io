@@ -81,7 +81,7 @@ function startset() {
 }
 
 function wahl1() {
-    location.href = "wahl.html"
+    location.href = "wahlalt.html"
 }
 
 function wahl2() {
