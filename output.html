@@ -20,8 +20,7 @@
     <div class="grid-container3">
 
         <button class="printbutton button1" onclick="modifyPdf()" id="printbutton">PDF herunterladen</button>
-        <button class="resetbutton button1" onclick="location.href='faecherwahl_main.html'" type="button"
-            id="resetbutton">Nochmal wählen</button>
+        <button class="resetbutton button1" onclick="location.href='faecherwahl_main.html'" type="button" id="resetbutton">Nochmal wählen</button>
         <input type="text" class="name" name="name" id="name" readonly>
         <label for="name" class="namelabel" id="namelabel"> Name: </label>
         <input type="text" class="lastname" name="lastname" id="lastname" readonly>
@@ -107,7 +106,10 @@
 
             const pages = pdfDoc.getPages()
             const firstPage = pages[0]
-            const { width, height } = firstPage.getSize()
+            const {
+                width,
+                height
+            } = firstPage.getSize()
 
             draw_text_to_pdf(firstname, 135, height - 80, firstPage, helveticaFont, rgb)
             draw_text_to_pdf(lastname, 320, height - 80, firstPage, helveticaFont, rgb)
@@ -234,6 +236,9 @@
                     case 'Religion':
                         draw_cross(gk_x, 184.75, firstPage)
                         break;
+                    case 'Erdkunde':
+                        draw_cross(gk_x, 331, firstPage)
+                        break;
                 }
 
             }
@@ -305,13 +310,13 @@
             let kunst_wish_x = 212
             let musik_wish_x = 282.75
             let religion_wish_x = 353.5
-            if(sessionStorage.getItem('profil') == 'muku' || sessionStorage.getItem('profil') == 'gese'){
+            if (sessionStorage.getItem('profil') == 'muku' || sessionStorage.getItem('profil') == 'gese') {
                 kunst_wish_x = 35
                 musik_wish_x = 141
             }
             if (sessionStorage.getItem('profil') == 'muku') {
                 religion_wish_x = 212
-                }
+            }
             if (sessionStorage.getItem('profil') == 'gese') {
                 religion_wish_x = 247.5
             }
@@ -339,14 +344,26 @@
         function draw_cross(a, e, firstPage) {
             firstPage.drawLine({
                 color: rgb(0, 0, 0),
-                start: { x: a, y: e },
-                end: { x: a + 10, y: e + 10 },
+                start: {
+                    x: a,
+                    y: e
+                },
+                end: {
+                    x: a + 10,
+                    y: e + 10
+                },
                 thickness: 1
             })
             firstPage.drawLine({
                 color: rgb(0, 0, 0),
-                start: { x: a, y: e + 10 },
-                end: { x: a + 10, y: e },
+                start: {
+                    x: a,
+                    y: e + 10
+                },
+                end: {
+                    x: a + 10,
+                    y: e
+                },
                 thickness: 1
             })
         }
