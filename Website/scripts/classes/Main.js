@@ -1269,3 +1269,23 @@ function loadShow(){
     elem.textContent = out;
 
 }
+
+
+
+
+
+/*
+To Do:
+
+- das mit dem zurücksetzen fixen -> done
+- die geschichte mit dem gessellschaftlichen und und den kernfächern in den prüfungsfächern
+- alle Texte ändern
+- halbwegs ansehbares Design schreiben
+- ausdrucken
+- informatik in den abdeckern
+- zurücksetzen und neu laden in den abdeckern
+- anzeigen von den bereichen und kernfächern
+
+
+
+*/
