@@ -556,6 +556,10 @@ function loadgA(p){
             kernfaecherAnzahl ++;
         }
     }
+    var fehltB = false;
+    if (selectedTaskfields[1]=="0"){
+        fehltB = true;
+    }
     for (let i = 0; i < taskfields.length; i++){
         if (selectedTaskfields[i] == 0){
             bedingungen.push(i);
@@ -576,6 +580,16 @@ function loadgA(p){
 
         if (selectedKindOfSubjects[2] == "1" && subjects[i].kindOfSubject == 2){
             continue;
+        }
+
+        //Wenn noch nichts gesellschaftliches gewählt wurde
+        
+        if (fehltB){
+            if (2 - kernfaecherAnzahl == 4 - p){ //Es wurden noch nicht alle Kernfächer gewählt und auf allen restlichen Positionen müssen Kernfächer liegen
+                if (subjects[i].kernfach == false && subjects[i].taskField != 1){
+                    continue;
+                }
+            }
         }
 
         if (2 - kernfaecherAnzahl == 5 - p){ //Es wurden noch nicht alle Kernfächer gewählt und auf allen restlichen Positionen müssen Kernfächer liegen
