@@ -184,6 +184,8 @@ function resetSpalte(spalte){
     var selectedTaskfields = getTaskfields();
     var selectedKindOfSubjects = getKindOfSubject();
     for (let i = spalte; i < 5; i++){
+        let elem = document.getElementById("p"+i+"reset");
+        elem.disabled = true;
         for (let j = 0; j < 20; j++){
             let elem = document.getElementById("button"+i+"_"+j); //Hier könnte was falsch sein
             //console.log(elem);
@@ -308,6 +310,8 @@ function loadeA(p){
     var selectedKindOfSubjects = getKindOfSubject();
     var selectedP = getP(); 
     //console.log(selectedProfiles);
+    let elem = document.getElementById("p"+p+"reset");
+    elem.disabled = false;
     
     for (let i = 0; i < subjects.length; i++){
         //herausfinden, ob es auf eA wählbar ist
@@ -545,6 +549,8 @@ function loadgA(p){
     var selectedKindOfSubjects = getKindOfSubject();
     var kernfaecherAnzahl = 0;
     var bedingungen = [];
+    let elem = document.getElementById("p"+p+"reset");
+    elem.disabled = false;
     for (let i = 0; i < p; i++){ //Kernfächer zählen
         if (subjects[selectedP[i]].kernfach == true){
             kernfaecherAnzahl ++;

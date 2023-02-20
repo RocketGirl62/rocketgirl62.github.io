@@ -43,11 +43,11 @@
         <p class="infoTaskfields">hier muss halt was hin</p>
         <button class="reset" type="button" onclick="resetSpalte(0);electionMain()">Reset</button>
         <button class="continue" id="continue" disabled="true" onclick="window.location = 'wahl2.html'" >Continue</button>
-        <button class="p0Reset" onclick="resetSpalte(0);electionMain()">reset p1</button>
-        <button class="p1Reset" onclick="resetSpalte(1); loadP2()">reset p2</button>
-        <button class="p2Reset" onclick="resetSpalte(2); loadP3()">reset p3</button>
-        <button class="p3Reset" onclick="resetSpalte(3); loadP4()">reset p4</button>
-        <button class="p4Reset" onclick="resetSpalte(4); loadP5()">reset p5</button>
+        <button class="p0Reset" id="p0Reset" disabled="true" onclick="resetSpalte(0);electionMain()">reset p1</button>
+        <button class="p1Reset" id="p1Reset" disabled="true" onclick="resetSpalte(1); loadP2()">reset p2</button>
+        <button class="p2Reset" id="p2Reset" disabled="true" onclick="resetSpalte(2); loadP3()">reset p3</button>
+        <button class="p3Reset" id="p3Reset" disabled="true" onclick="resetSpalte(3); loadP4()">reset p4</button>
+        <button class="p4Reset" id="p4Reset" disabled="true" onclick="resetSpalte(4); loadP5()">reset p5</button>
         <div class="p0">
             <h3>Irgendwas</h3>
             <button class="" disabled="false" id="button0_0"  onclick="selectP(0, 0), loadP2()"> </button> 
