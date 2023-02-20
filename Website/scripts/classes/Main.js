@@ -218,7 +218,7 @@ function resetSpalte(spalte){
     selectedProfiles = getArray(initializeArray(selectedProfiles.length, "1"));
     //console.log(selectedProfiles);
     setProfiles(selectedProfiles);
-    for (let i = 0; i < spalte; i++) {
+    for (let i = 0; i < spalte || i < 4; i++) {
         chooseProfil(i, subjects[selectedP[i]]);
 
     }
@@ -1292,7 +1292,7 @@ function loadShow(){
 To Do:
 
 - das mit dem zurücksetzen fixen -> done
-- die geschichte mit dem gessellschaftlichen und und den kernfächern in den prüfungsfächern
+- die geschichte mit dem gessellschaftlichen und und den kernfächern in den prüfungsfächern -> habe es schon versucht, jetzt fehlt noch p3
 - alle Texte ändern
 - halbwegs ansehbares Design schreiben
 - ausdrucken
