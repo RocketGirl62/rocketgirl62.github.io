@@ -998,7 +998,7 @@ function loadNextBox(b){
         elem = document.getElementById("h" + b);
         elem.textContent = "Informatik?";
         showButton("button"+b+"_0", "ja", true);
-        showButton("button"+b+"_0", "nein", true);
+        showButton("button"+b+"_1", "nein", true);
         showingBoxes[b] = 9;
         setShowingBoxes(showingBoxes);
         return;
