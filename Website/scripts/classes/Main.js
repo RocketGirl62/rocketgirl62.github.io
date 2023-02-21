@@ -804,7 +804,7 @@ function loadNextBox(b){
         elem.classList.remove("nonvisible");
         elem.classList.add("visible");
         elem = document.getElementById("h" + b);
-        elem.textContent = "Weitere " + kindOfSubjects[reihnfolge[i]].name;
+        elem.textContent = "Weitere " + kindOfSubjects[1].name;
         for (let j = 0; j < subjects.length; j++){
             if (subjects[j].gA == false){
                 continue;
