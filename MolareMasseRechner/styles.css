@@ -1,0 +1,756 @@
+/* Allgemeine Angaben zum Style, die überall benötigt werden*/
+html {
+    /* Festlegen der Schriftart für die gesamte Website*/
+    font-family: 'Rubik', sans-serif; /*Vielleicht hier noch eine andere?*/
+}
+h1{
+    font-size: 3em;
+}
+
+/* Hintergrund*/
+.bg {
+    background-color: #e6e6e6;
+}
+
+.element-grid {
+    display: grid;
+    color: #e6e6e6;
+    grid-template-columns: repeat(2, 4em);
+    grid-template-areas:
+    'ordnungszah masse'
+    'element element'
+    'name name'
+    'anzahl anzahl'
+    'plus minus';
+    background-color: rgba(2, 116, 255, 0.8);
+    /*gap: 5px;*/
+    /*padding: 5px;*/
+    font-size: 1em;
+    min-height: 12em;
+}
+
+.periodensystem-grid {
+    display: grid;
+    grid-template-columns: 5em repeat(32, 8em);
+    grid-template-areas: 
+    'periode hgA hgA ngA la la la la la la la la la la la la la la ngB ngB ngB ngB ngB ngB ngB ngB ngB hgB hgB hgB hgB hgB hgB'
+    'n z1 z2 z3 nx nx nx nx nx nx nx nx nx nx nx nx nx nx z4 z5 z6 z7 z8 z9 z10 z11 z12 z13 z14 z15 z16 z17 z18'
+    'p0 e1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 n1 e2'
+    'p1 e3 e4 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 n2 e5 e6 e7 e8 e9 e10'
+    'p2 e11 e12 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 n3 e13 e14 e15 e16 e17 e18'
+    'p3 e19 e20 e21 n4 n4 n4 n4 n4 n4 n4 n4 n4 n4 n4 n4 n4 n4 e22 e23 e24 e25 e26 e27 e28 e29 e30 e31 e32 e33 e34 e35 e36'
+    'p4 e37 e38 e39 n5 n5 n5 n5 n5 n5 n5 n5 n5 n5 n5 n5 n5 n5 e40 e41 e42 e43 e44 e45 e46 e47 e48 e49 e50 e51 e52 e53 e54'
+    'p5 e55 e56 e57 e58 e59 e60 e61 e61 e63 e64 e65 e66 e67 e68 e69 e70 e71 e72 e73 e74 e75 e76 e77 e78 e79 e80 e81 e82 e83 e84 e85 e86'
+    'p6 e87 e88 e89 e90 e91 e92 e93 e94 e95 e96 e97 e98 e99 e100 e101 e102 e103 e104 e105 e106 e107 e108 e109 e110 e111 e112 e113 e114 e115 e116 e117 e118';
+    gap: 5px;
+    padding: 10px;
+    
+}
+#molaremasse {
+    font-size: 2em;
+}
+.reset {
+    font-size: 1.5em;
+}
+
+.ordnungszah {
+    grid-area: ordnungszah;
+    text-align: left;
+    margin: 0.4em;
+}
+.masse {
+    grid-area: masse;
+    text-align: right;
+    margin: 0.4em;
+}
+.element {
+    grid-area: element;
+    font-size: 2em;
+    text-align: center;
+    margin: 0em;
+}
+.name {
+    grid-area: name;
+    text-align: center;
+    height: 3em;
+}
+.anzahl {
+    grid-area: anzahl;
+    background-color: rgb(100, 100, 100);
+    margin: 0em;
+    padding-left: 0.4em;
+    padding-top: 0.2em;
+    vertical-align: bottom;
+    height: 1.4 em;
+    
+}
+
+.plus {
+    grid-area: plus;
+    text-align: center;
+    background-color: #07b407;
+}
+.minus {
+    grid-area: minus;
+    text-align: center;
+    background-color: rgb(235, 48, 48);
+}
+
+
+.periode {
+    grid-area: periode;
+    font-size: 1.5em;
+}
+
+.hgA {
+    grid-area: hgA;
+    font-size: 1.5em;
+}
+
+.hgB {
+    grid-area: hgB;
+    font-size: 1.5em;
+}
+
+.ngA {
+    grid-area: ngA;
+    font-size: 1.5em;
+}
+
+.ngB {
+    grid-area: ngB;
+    font-size: 1.5em;
+}
+
+.la {
+    grid-area: la;
+    font-size: 1.5em;
+}
+
+.nx {
+    grid-area: nx;
+}
+
+.n1 {
+    grid-area: n1;
+}
+
+.n2 {
+    grid-area: n2;
+}
+
+.n3 {
+    grid-area: n3;
+}
+
+.n4 {
+    grid-area: n4;
+    
+}
+
+.n5 {
+    grid-area: n5;
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+.p0 {
+    grid-area: p0;
+    font-size: 1.5em;
+}
+
+.p1 {
+    grid-area: p1;
+    font-size: 1.5em;
+}
+
+.p2 {
+    grid-area: p2;
+    font-size: 1.5em;
+}
+
+.p3 {
+    grid-area: p3;
+    font-size: 1.5em;
+}
+
+.p4 {
+    grid-area: p4;
+    font-size: 1.5em;
+}
+
+.p5 {
+    grid-area: p5;
+    font-size: 1.5em;
+}
+
+.p6 {
+    grid-area: p6;
+    font-size: 1.5em;
+}
+
+.n {
+    grid-area: n;
+}
+
+.z1 {
+    grid-area: z1;
+    font-size: 1.5em;
+}
+
+.z2 {
+    grid-area: z2;
+    font-size: 1.5em;
+}
+
+.z3 {
+    grid-area: z3;
+    font-size: 1.5em;
+}
+
+.z4 {
+    grid-area: z4;
+    font-size: 1.5em;
+}
+
+.z5 {
+    grid-area: z5;
+    font-size: 1.5em;
+}
+
+.z6 {
+    grid-area: z6;
+    font-size: 1.5em;
+}
+
+.z7 {
+    grid-area: z7;
+    font-size: 1.5em;
+}
+
+.z8 {
+    grid-area: z8;
+    font-size: 1.5em;
+}
+
+.z9 {
+    grid-area: z9;
+    font-size: 1.5em;
+}
+
+.z10 {
+    grid-area: z10;
+    font-size: 1.5em;
+}
+
+.z11 {
+    grid-area: z11;
+    font-size: 1.5em;
+}
+
+.z12 {
+    grid-area: z12;
+    font-size: 1.5em;
+}
+
+.z13 {
+    grid-area: z13;
+    font-size: 1.5em;
+}
+
+.z14 {
+    grid-area: z14;
+    font-size: 1.5em;
+}
+
+.z15 {
+    grid-area: z15;
+    font-size: 1.5em;
+}
+
+.z16 {
+    grid-area: z16;
+    font-size: 1.5em;
+}
+
+.z17 {
+    grid-area: z17;
+    font-size: 1.5em;
+}
+
+.z18 {
+    grid-area: z18;
+    font-size: 1.5em;
+}
+
+.e1 {
+    grid-area: e1;
+}
+
+.e2 {
+    grid-area: e2;
+}
+
+.e3 {
+    grid-area: e3;
+}
+
+.e4 {
+    grid-area: e4;
+}
+
+.e5 {
+    grid-area: e5;
+}
+
+.e6 {
+    grid-area: e6;
+}
+
+.e7 {
+    grid-area: e7;
+}
+
+.e8 {
+    grid-area: e8;
+}
+
+.e9 {
+    grid-area: e9;
+}
+
+.e10 {
+    grid-area: e10;
+}
+
+.e11 {
+    grid-area: e11;
+}
+
+.e12 {
+    grid-area: e12;
+}
+
+.e13 {
+    grid-area: e13;
+}
+
+.e14 {
+    grid-area: e14;
+}
+
+.e15 {
+    grid-area: e15;
+}
+
+.e16 {
+    grid-area: e16;
+}
+
+.e17 {
+    grid-area: e17;
+}
+
+.e18 {
+    grid-area: e18;
+}
+
+.e19 {
+    grid-area: e19;
+}
+
+.e20 {
+    grid-area: e20;
+}
+
+.e21 {
+    grid-area: e21;
+}
+
+.e22 {
+    grid-area: e22;
+}
+
+.e23 {
+    grid-area: e23;
+}
+
+.e24 {
+    grid-area: e24;
+}
+
+.e25 {
+    grid-area: e25;
+}
+
+.e26 {
+    grid-area: e26;
+}
+
+.e27 {
+    grid-area: e27;
+}
+
+.e28 {
+    grid-area: e28;
+}
+
+.e29 {
+    grid-area: e29;
+}
+
+.e30 {
+    grid-area: e30;
+}
+
+.e31 {
+    grid-area: e31;
+}
+
+.e32 {
+    grid-area: e32;
+}
+
+.e33 {
+    grid-area: e33;
+}
+
+.e34 {
+    grid-area: e34;
+}
+
+.e35 {
+    grid-area: e35;
+}
+
+.e36 {
+    grid-area: e36;
+}
+
+.e37 {
+    grid-area: e37;
+}
+
+.e38 {
+    grid-area: e38;
+}
+
+.e39 {
+    grid-area: e39;
+}
+
+.e40 {
+    grid-area: e40;
+}
+
+.e41 {
+    grid-area: e41;
+}
+
+.e42 {
+    grid-area: e42;
+}
+
+.e43 {
+    grid-area: e43;
+}
+
+.e44 {
+    grid-area: e44;
+}
+
+.e45 {
+    grid-area: e45;
+}
+
+.e46 {
+    grid-area: e46;
+}
+
+.e47 {
+    grid-area: e47;
+}
+
+.e48 {
+    grid-area: e48;
+}
+
+.e49 {
+    grid-area: e49;
+}
+
+.e50 {
+    grid-area: e50;
+}
+
+.e51 {
+    grid-area: e51;
+}
+
+.e52 {
+    grid-area: e52;
+}
+
+.e53 {
+    grid-area: e53;
+}
+
+.e54 {
+    grid-area: e54;
+}
+
+.e55 {
+    grid-area: e55;
+}
+
+.e56 {
+    grid-area: e56;
+}
+
+.e57 {
+    grid-area: e57;
+}
+
+.e58 {
+    grid-area: e58;
+}
+
+.e59 {
+    grid-area: e59;
+}
+
+.e60 {
+    grid-area: e60;
+}
+
+.e61 {
+    grid-area: e61;
+}
+
+.e62 {
+    grid-area: e62;
+}
+
+.e63 {
+    grid-area: e63;
+}
+
+.e64 {
+    grid-area: e64;
+}
+
+.e65 {
+    grid-area: e65;
+}
+
+.e66 {
+    grid-area: e66;
+}
+
+.e67 {
+    grid-area: e67;
+}
+
+.e68 {
+    grid-area: e68;
+}
+
+.e69 {
+    grid-area: e69;
+}
+
+.e70 {
+    grid-area: e70;
+}
+
+.e71 {
+    grid-area: e71;
+}
+
+.e72 {
+    grid-area: e72;
+}
+
+.e73 {
+    grid-area: e73;
+}
+
+.e74 {
+    grid-area: e74;
+}
+
+.e75 {
+    grid-area: e75;
+}
+
+.e76 {
+    grid-area: e76;
+}
+
+.e77 {
+    grid-area: e77;
+}
+
+.e78 {
+    grid-area: e78;
+}
+
+.e79 {
+    grid-area: e79;
+}
+
+.e80 {
+    grid-area: e80;
+}
+
+.e81 {
+    grid-area: e81;
+}
+
+.e82 {
+    grid-area: e82;
+}
+
+.e83 {
+    grid-area: e83;
+}
+
+.e84 {
+    grid-area: e84;
+}
+
+.e85 {
+    grid-area: e85;
+}
+
+.e86 {
+    grid-area: e86;
+}
+
+.e87 {
+    grid-area: e87;
+}
+
+.e88 {
+    grid-area: e88;
+}
+
+.e89 {
+    grid-area: e89;
+}
+
+.e90 {
+    grid-area: e90;
+}
+
+.e91 {
+    grid-area: e91;
+}
+
+.e92 {
+    grid-area: e92;
+}
+
+.e93 {
+    grid-area: e93;
+}
+
+.e94 {
+    grid-area: e94;
+}
+
+.e95 {
+    grid-area: e95;
+}
+
+.e96 {
+    grid-area: e96;
+}
+
+.e97 {
+    grid-area: e97;
+}
+
+.e98 {
+    grid-area: e98;
+}
+
+.e99 {
+    grid-area: e99;
+}
+
+.e100 {
+    grid-area: e100;
+}
+
+.e101 {
+    grid-area: e101;
+}
+
+.e102 {
+    grid-area: e102;
+}
+
+.e103 {
+    grid-area: e103;
+}
+
+.e104 {
+    grid-area: e104;
+}
+
+.e105 {
+    grid-area: e105;
+}
+
+.e106 {
+    grid-area: e106;
+}
+
+.e107 {
+    grid-area: e107;
+}
+
+.e108 {
+    grid-area: e108;
+}
+
+.e109 {
+    grid-area: e109;
+}
+
+.e110 {
+    grid-area: e110;
+}
+
+.e111 {
+    grid-area: e111;
+}
+
+.e112 {
+    grid-area: e112;
+}
+
+.e113 {
+    grid-area: e113;
+}
+
+.e114 {
+    grid-area: e114;
+}
+
+.e115 {
+    grid-area: e115;
+}
+
+.e116 {
+    grid-area: e116;
+}
+
+.e117 {
+    grid-area: e117;
+}
+
+.e118 {
+    grid-area: e118;
+}
