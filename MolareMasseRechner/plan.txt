@@ -1,0 +1,3 @@
+- grid für das periodensystem, lactanoide und actanoide da mit hinzu
+- für jedes element einzelnes grid
+- damit es bissechen einfacher ist hauptgruppen etc. oben drüber

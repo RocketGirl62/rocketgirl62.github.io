@@ -1,0 +1,118 @@
+1	H	Wasserstoff (Hydro­genium)	Nicht­metall	hexagonal	1,01	0,090	−259,1	−252,9	1766	Cavendish	1s1	2
+2	He	Helium	Edelgas	hexagonal​[Anm. 1]	4,00	0,179	−272,2​[Anm. 1]	−268,9	1895	Ramsay, Crookes	1s2	2
+3	Li	Lithium	Alkali­metall	kubisch	6,94	534	180,5	1317	1817	Arfwedson	[He] 2s1	2
+4	Be	Beryllium	Erdalkali­metall	hexagonal	9,01	1848	1278	2970	1797	Vauquelin	[He] 2s2	1
+5	B	Bor	Halb­metall	trigonal	10,81	2460	2300	2550	1808	Davy, Gay-Lussac	[He] 2s2 2p1	2
+6	C	Kohlenstoff (Car­bonium)	Nicht­metall	Graphit: hexagonal Diamant: kubisch	12,01	G: 2260 D: 3510	3550⁠2	3550⁠2	Altertum	–	[He] 2s2 2p2	2
+7	N	Stickstoff (Nitro­genium)	Nicht­metall	hexagonal	14,01	1,170	−209,9	−195,8	1771	Scheele	[He] 2s2 2p3	2
+8	O	Sauerstoff (Oxy­genium)	Nicht­metall	kubisch	16,00	1,33	−218,4	−182,9	1774	Priestley, Scheele	[He] 2s2 2p4	3
+9	F	Fluor	Halogen	kubisch	19,00	1,58	−219,6	−188,1	1886	Moissan	[He] 2s2 2p5	1
+10	Ne	Neon	Edelgas	kubisch	20,18	0,84	−248,7	−246,1	1898	Ramsay, Travers	[He] 2s2 2p6	3
+11	Na	Natrium	Alkali­metall	kubisch	22,99	968	97,8	892	1807	Davy	[Ne] 3s1	1
+12	Mg	Magnesium	Erdalkali­metall	hexagonal	24,30	1738	648,8	1107	1828	Bussy	[Ne] 3s2	3
+13	Al	Aluminium	Metall	kubisch	26,98	2699	660,5	2467	1825	Ørsted	[Ne] 3s2 3p1	1
+14	Si	Silicium	Halb­metall	kubisch	28,09	2336	1410	2355	1824	Berzelius	[Ne] 3s2 3p2	3
+15	P	Phosphor⁠3	Nicht­metall	ortho­rhombisch	30,97	1820	44	280	1669	Brand	[Ne] 3s2 3p3	1
+16	S	Schwefel (Sulphur)	Nicht­metall	ortho­rhombisch	32,07	2060	113	444,7	Altertum	–	[Ne] 3s2 3p4	4
+17	Cl	Chlor	Halogen	ortho­rhombisch	35,45	2,95	−101	−34,6	1774	Scheele	[Ne] 3s2 3p5	2
+18	Ar	Argon	Edelgas	kubisch	39,94	1,66	−189,4	−185,9	1894	Ramsay, Strutt	[Ne] 3s2 3p6	3
+19	K	Kalium	Alkali­metall	kubisch	39,10	856	63,7	774	1807	Davy	[Ar] 4s1	2
+20	Ca	Calcium	Erdalkali­metall	kubisch	40,08	1540	839	1487	1808	Davy	[Ar] 4s2	5
+21	Sc	Scandium	Über­gangs­metall	hexagonal	44,96	2990	1539	2832	1879	Nilson	[Ar] 3d1 4s2	1
+22	Ti	Titan	Über­gangs­metall	hexagonal	47,88	4510	1660	3260	1791	Gregor, Klaproth	[Ar] 3d2 4s2	5
+23	V	Vanadium	Über­gangs­metall	kubisch	50,94	6090	1890	3380	1801	del Río	[Ar] 3d3 4s2	1
+24	Cr	Chrom	Über­gangs­metall	kubisch	52,00	7140	1857	2482	1797	Vauquelin	[Ar] 3d5 4s1	3
+25	Mn	Mangan	Über­gangs­metall	kubisch	54,90	7440	1244	2097	1774	Gahn	[Ar] 3d5 4s2	1
+26	Fe	Eisen (Ferrum)	Über­gangs­metall	α-Eisen: kubisch γ-Eisen: kubisch	55,85	7874	1539	2750	Altertum	–	[Ar] 3d6 4s2	4
+27	Co	Cobalt	Über­gangs­metall	hexagonal	58,93	8890	1495	2870	1735	Brandt	[Ar] 3d7 4s2	1
+28	Ni	Nickel	Über­gangs­metall	kubisch	58,69	8910	1453	2732	1751	Cronstedt	[Ar] 3d8 4s2 [Ar] 3d9 4s1	5
+29	Cu	Kupfer (Cuprum)	Über­gangs­metall	kubisch	63,55	8920	1083,5	2595	Altertum	–	[Ar] 3d10 4s1	2
+30	Zn	Zink	Über­gangs­metall	hexagonal	65,39	7140	419,6	907	Altertum	–	[Ar] 3d10 4s2	4
+31	Ga	Gallium	Metall	ortho­rhombisch	69,72	5904	29,8	2403	1875	Lecoq de Boisbaudran	[Ar] 3d10 4s2 4p1	2
+32	Ge	Germanium	Halb­metall	kubisch	72,61	5323	937,4	2830	1886	Winkler	[Ar] 3d10 4s2 4p2	4
+33	As	Arsen	Halb­metall	trigonal	74,92	5720	613⁠2	613⁠2	13. Jhd.	Albertus Magnus	[Ar] 3d10 4s2 4p3	1
+34	Se	Selen	Halb­metall	hexagonal	78,96	4819	217	685	1817	Berzelius	[Ar] 3d10 4s2 4p4	5
+35	Br	Brom	Halogen	ortho­rhombisch	79,90	3140	−7,3	58,8	1826	Balard	[Ar] 3d10 4s2 4p5	2
+36	Kr	Krypton	Edelgas	kubisch	83,80	3,749	−156,6	−152,3	1898	Ramsay, Travers	[Ar] 3d10 4s2 4p6	5
+37	Rb	Rubidium	Alkali­metall	kubisch	85,45	1530	39	688	1861	Bunsen, Kirchhoff	[Kr] 5s1	1
+38	Sr	Strontium	Erdalkali­metall	kubisch	87,62	2630	769	1384	1798	Klaproth	[Kr] 5s2	4
+39	Y	Yttrium	Über­gangs­metall	hexagonal	88,91	4470	1523	3337	1794	Gadolin	[Kr] 4d1 5s2	1
+40	Zr	Zirconium	Über­gangs­metall	hexagonal	91,22	6510	1852	4377	1789	Klaproth	[Kr] 4d2 5s2	4
+41	Nb	Niob	Über­gangs­metall	kubisch	92,91	8580	2468	4927	1801	Hatchet	[Kr] 4d4 5s1	1
+42	Mo	Molybdän	Über­gangs­metall	kubisch	95,94	10280	2617	5560	1778	Scheele	[Kr] 4d5 5s1	6
+43	Tc	Technetium	Über­gangs­metall	hexagonal	98,91	11490	2172	5030	1937	Segrè	[Kr] 4d6 5s1	0
+44	Ru	Ruthenium	Über­gangs­metall	hexagonal	101,07	12450	2310	3900	1844	Claus	[Kr] 4d7 5s1	7
+45	Rh	Rhodium	Über­gangs­metall	kubisch	102,91	12410	1966	3727	1803	Wollaston	[Kr] 4d8 5s1	1
+46	Pd	Palladium	Über­gangs­metall	kubisch	106,42	12020	1552	3140	1803	Wollaston	[Kr] 4d10 5s0	6
+47	Ag	Silber (Argentum)	Über­gangs­metall	kubisch	107,87	10490	961,9	2212	Altertum	–	[Kr] 4d10 5s1	2
+48	Cd	Cadmium	Über­gangs­metall	hexagonal	112,41	8640	321	765	1817	Stromeyer, Hermann	[Kr] 4d10 5s2	5
+49	In	Indium	Metall	tetragonal	114,82	7310	156,2	2080	1863	Reich, Richter	[Kr] 4d10 5s2 5p1	1
+50	Sn	Zinn (Stannum)	Metall	α-Zinn: kubisch β-Zinn: tetragonal	118,71	7290	232	2270	Altertum	–	[Kr] 4d10 5s2 5p2	10
+51	Sb	Antimon (Stibium)	Halb­metall	trigonal	121,75	6690	630,7	1750	Altertum	–	[Kr] 4d10 5s2 5p3	2
+52	Te	Tellur	Halb­metall	trigonal	127,60	6250	449,6	990	1782	von Reichenstein	[Kr] 4d10 5s2 5p4	2
+53	I	Iod	Halogen	ortho­rhombisch	126,90	4940	113,5	184,4	1811	Courtois	[Kr] 4d10 5s2 5p5	4
+54	Xe	Xenon	Edelgas	kubisch	131,29	4,49	−111,9	−107	1898	Ramsay, Travers	[Kr] 4d10 5s2 5p6	6
+55	Cs	Caesium	Alkali­metall	kubisch	132,91	1900	28,4	690	1860	Kirchhoff, Bunsen	[Xe] 6s1	1
+56	Ba	Barium	Erdalkali­metall	kubisch	137,33	3650	725	1640	1808	Davy	[Xe] 6s2	7
+57	La	Lanthan	Über­gangs­metall	hexagonal	138,90	6160	920	3454	1839	Mosander	[Xe] 5d1 6s2	1
+58	Ce	Cer	Lantha­noid	kubisch	140,11	6770	798	3257	1803	von Hisinger, Berzelius, Klaproth	[Xe] 4f1 5d1 6s2	1
+59	Pr	Praseodym	Lantha­noid	hexagonal	140,91	6480	931	3212	1895	von Welsbach	[Xe] 4f3 6s2	1
+60	Nd	Neodym	Lantha­noid	hexagonal	144,24	7000	1010	3127	1895	von Welsbach	[Xe] 4f4 6s2	5
+61	Pm	Pro­methium	Lantha­noid	hexagonal	146,92	7220	1080	2730	1945	Marinsky	[Xe] 4f5 6s2	0
+62	Sm	Samarium	Lantha­noid	trigonal	150,36	7540	1072	1778	1879	Lecoq de Boisbaudran	[Xe] 4f6 6s2	4
+63	Eu	Europium	Lantha­noid	kubisch	151,96	5250	822	1597	1901	Demarçay	[Xe] 4f7 6s2	2
+64	Gd	Gadolinium	Lantha­noid	hexagonal	157,25	7890	1311	3233	1880	de Marignac	[Xe] 4f7 5d1 6s2	5
+65	Tb	Terbium	Lantha­noid	hexagonal	158,93	8250	1360	3041	1843	Mosander	[Xe] 4f9 6s2	1
+66	Dy	Dysprosium	Lantha­noid	hexagonal	162,50	8560	1409	2335	1886	Lecoq de Boisbaudran	[Xe] 4f10 6s2	7
+67	Ho	Holmium	Lantha­noid	hexagonal	164,93	8780	1470	2720	1878	Soret	[Xe] 4f11 6s2	1
+68	Er	Erbium	Lantha­noid	hexagonal	167,26	9050	1522	2510	1842	Mosander	[Xe] 4f12 6s2	6
+69	Tm	Thulium	Lantha­noid	hexagonal	168,93	9320	1545	1727	1879	Cleve	[Xe] 4f13 6s2	1
+70	Yb	Ytterbium	Lantha­noid	kubisch	173,04	6970	824	1193	1878	de Marignac	[Xe] 4f14 6s2	7
+71	Lu	Lutetium	Lantha­noid	hexagonal	174,97	9840	1656	3315	1907	von Welsbach, Urbain	[Xe] 4f14 5d1 6s2	1
+72	Hf	Hafnium	Über­gangs­metall	hexagonal	178,49	13310	2150	5400	1923	Coster, de Hevesy	[Xe] 4f14 5d2 6s2	5
+73	Ta	Tantal	Über­gangs­metall	kubisch	180,95	16680	2996	5425	1802	Ekeberg	[Xe] 4f14 5d3 6s2	1
+74	W	Wolfram	Über­gangs­metall	kubisch	183,85	19260	3407	5927	1783	Fausto und Juan de Elhuyar	[Xe] 4f14 5d4 6s2	4
+75	Re	Rhenium	Über­gangs­metall	hexagonal	186,21	21030	3180	5627	1925	Noddack, Tacke, Berg	[Xe] 4f14 5d5 6s2	1
+76	Os	Osmium	Über­gangs­metall	hexagonal	190,23	22590	3045	5027	1803	Tennant	[Xe] 4f14 5d6 6s2	5
+77	Ir	Iridium	Über­gangs­metall	kubisch	192,22	22560	2410	4130	1803	Tennant	[Xe] 4f14 5d7 6s2	2
+78	Pt	Platin	Über­gangs­metall	kubisch	195,08	21450	1772	3827	1557	Scaliger	[Xe] 4f14 5d9 6s1	5
+79	Au	Gold (Aurum)	Über­gangs­metall	kubisch	196,97	19320	1064,4	2940	Altertum	–	[Xe] 4f14 5d10 6s1	1
+80	Hg	Quecksilber (Hydrar­gyrum)	Über­gangs­metall	trigonal	200,59	13550	−38,9	356,6	Altertum	–	[Xe] 4f14 5d10 6s2	7
+81	Tl	Thallium	Metall	hexagonal	204,38	11850	303,6	1457	1861	Crookes	[Xe] 4f14 5d10 6s2 6p1	2
+82	Pb	Blei (Plumbum)	Metall	kubisch	207,2	11340	327,5	1740	Altertum	–	[Xe] 4f14 5d10 6s2 6p2	3
+83	Bi	Bismut (auch Wismut)	Metall	trigonal	208,98	9800	271,4	1560	1540	Agricola	[Xe] 4f14 5d10 6s2 6p3	0
+84	Po	Polonium	Metall	α-Polonium: kubisch β-Polonium: trigonal	208,98	9200	254	962	1898	Marie und Pierre Curie	[Xe] 4f14 5d10 6s2 6p4	0
+85	At	Astat	Halogen	kubisch	209,99		302	337	1940	Segrè	[Xe] 4f14 5d10 6s2 6p5	0
+86	Rn	Radon	Edelgas	kubisch	222,02	9,23	−71	−61,8	1900	Dorn	[Xe] 4f14 5d10 6s2 6p6	0
+87	Fr	Francium	Alkali­metall	kubisch	223,02		27	677	1939	Perey	[Rn] 7s1	0
+88	Ra	Radium	Erdalkali­metall	kubisch	226,03	5500	700	1140	1898	Marie und Pierre Curie	[Rn] 7s2	0
+89	Ac	Actinium	Über­gangs­metall	kubisch	227,03	10070	1047	3197	1899	Debierne	[Rn] 6d1 7s2	0
+90	Th	Thorium	Actinoid	kubisch	232,04	11720	1750	4787	1829	Berzelius	[Rn] 6d2 7s2	0
+91	Pa	Protac­tinium	Actinoid	tetragonal	231,04	15370	1554	4030	1917	Fajans, Hahn, Meitner	[Rn] 5f2 6d1 7s2	0
+92	U	Uran	Actinoid	ortho­rhombisch	238,03	18970	1132,4	3818	1789	Klaproth	[Rn] 5f3 6d1 7s2	0
+93	Np	Neptunium	Actinoid	ortho­rhombisch	237,05	20480	640	3902	1940	McMillan, Abelson	[Rn] 5f4 6d1 7s2	0
+94	Pu	Plutonium	Actinoid	monoklin	244,06	19740	641	3327	1940	Seaborg	[Rn] 5f6 7s2	0
+95	Am	Americium	Actinoid	hexagonal	243,06	13670	994	2607	1944	Seaborg	[Rn] 5f7 7s2	0
+96	Cm	Curium	Actinoid	hexagonal	247,07	13510	1340	3110	1944	Seaborg	[Rn] 5f7 6d1 7s2	0
+97	Bk	Berkelium	Actinoid	hexagonal	247,07	13250	986		1949	Seaborg	[Rn] 5f9 7s2	0
+98	Cf	Californium	Actinoid	hexagonal	251,08	15100	900		1950	Seaborg	[Rn] 5f10 7s2	0
+99	Es	Einsteinium	Actinoid	kubisch	252,08		860		1952	Seaborg	[Rn] 5f11 7s2	0
+100	Fm	Fermium	Actinoid	kubisch	257,10				1952	Seaborg	[Rn] 5f12 7s2	0
+101	Md	Mende­levium	Actinoid	kubisch	258				1955	Seaborg	[Rn] 5f13 7s2	0
+102	No	Nobelium	Actinoid	kubisch	259				1958	Seaborg	[Rn] 5f14 7s2	0
+103	Lr	Lawren­cium	Actinoid	hexagonal	260		1627		1961	Ghiorso	[Rn] 5f14 6d1 7s2 [Rn] 5f14 7s2 7p1	0
+104	Rf	Ruther­fordium	Über­gangs­metall	hexagonal	261,11				1964/69	Ghiorso	[Rn] 5f14 6d2 7s2	0
+105	Db	Dubnium	Über­gangs­metall	kubisch	262,11				1967/70	Ghiorso	[Rn] 5f14 6d3 7s2	0
+106	Sg	Seaborgium	Über­gangs­metall	kubisch	263,12				1974	Oganesjan	[Rn] 5f14 6d4 7s2	0
+107	Bh	Bohrium	Über­gangs­metall	hexagonal	262,12				1976	Oganesjan	[Rn] 5f14 6d5 7s2	0
+108	Hs	Hassium	Über­gangs­metall	hexagonal	265				1984	GSI	[Rn] 5f14 6d6 7s2	0
+109	Mt	Meitnerium			266				1982	GSI	[Rn] 5f14 6d7 7s2	0
+110	Ds	Darm­stadtium			269				1994	GSI	[Rn] 5f14 6d8 7s2	0
+111	Rg	Roent­genium			272				1994	GSI	[Rn] 5f14 6d10 7s1	0
+112	Cn	Coper­nicium			277				1996	GSI	[Rn] 5f14 6d10 7s2	0
+113	Nh	Nihonium			287				2006	JINR	[Rn] 5f14 6d10 7s2 7p1	0
+114	Fl	Flerovium			289				1999	JINR	[Rn] 5f14 6d10 7s2 7p2	0
+115	Mc	Moscovium			288				2006	JINR	[Rn] 5f14 6d10 7s2 7p3	0
+116	Lv	Liver­morium			289				2000	JINR	[Rn] 5f14 6d10 7s2 7p4	0
+117	Ts	Tenness			292				2010	JINR	[Rn] 5f14 6d10 7s2 7p5	0
+118	Og	Oganesson			293				2006	JINR	[Rn] 5f14 6d10 7s2 7p6	0

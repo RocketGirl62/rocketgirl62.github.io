@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Molare Masse</title>
+    <meta name="author" content="Isabel Reinema" />
+    <meta name="description" content="Rechner für molare Massen" />
+    <!--Schriftart-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <!--Stylesheets-->
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <!--Scripts-->
+    <script src="script.js"></script>
+    <script src="elements.js"></script>
+    
+</head>
+
+<body class="bg" onload="start();">
+    <h1>Rechner für molare Massen</h1>
+    <br>
+    <p id="molaremasse"></p>
+    <button class="reset" onclick="start();">Reset</button>
+    <br>
+    <div class="periodensystem-grid" id="periodensystem-grid">
+        <div class="periode">
+            <p>Periode</p>
+        </div>
+        <div class="hgA">
+            <p>Hauptgruppe</p>
+        </div>
+        <div class="ngA">
+            <p>Nebengruppe</p>
+        </div>
+        <div class="la">
+            <p></p>
+        </div>
+        <div class="ngB">
+            <p>Nebengruppe</p>
+        </div>
+        <div class="hgB">
+            <p>Hauptgruppe</p>
+        </div>
+        <div class="n"><br></div>
+        <div class="z1"><p>1    (I)</p></div>
+        <div class="z2"><p>2    (II)</p></div>
+        <div class="z3"><p>3</p></div>
+        <div class="nx"><br></div>
+        <div class="z4"><p>4</p></div>
+        <div class="z5"><p>5</p></div>
+        <div class="z6"><p>6</p></div>
+        <div class="z7"><p>7</p></div>
+        <div class="z8"><p>8</p></div>
+        <div class="z9"><p>9</p></div>
+        <div class="z10"><p>10</p></div>
+        <div class="z11"><p>11</p></div>
+        <div class="z12"><p>12</p></div>
+        <div class="z13"><p>13    (III)</p></div>
+        <div class="z14"><p>14    (IV)</p></div>
+        <div class="z15"><p>15    (V)</p></div>
+        <div class="z16"><p>16    (VI)</p></div>
+        <div class="z17"><p>17    (VII)</p></div>
+        <div class="z18"><p>18    (VIII)</p></div>
+        
+        <div class="p0">
+            <p>1</p>
+        </div>
+        
+        <div class="element-grid" id="e1">
+            <p class="ordnungszah" id="e1o"></p>
+            <p class="masse" id="e1m"></p>
+            <p class="element" id="e1i"></p>
+            <p class="name" id="e1n"></p>
+            <p class="anzahl" id="e1a"></p>
+            <button class="plus" id="e1+" onclick="add(1)">
+            </button>
+            <button class="minus" id="e1-" onclick="reduce(1)"></button>
+    </div>
+    <div class="n1"><br></div>
+    
+    <div class="element-grid" id="e2">
+            <p class="ordnungszah" id="e2o"></p>
+            <p class="masse" id="e2m"></p>
+            <p class="element" id="e2i"></p>
+            <p class="name" id="e2n"></p>
+            <p class="anzahl" id="e2a"></p>
+            <button class="plus" id="e2+" onclick="add(2)">
+            </button>
+            <button class="minus" id="e2-" onclick="reduce(2)"></button>
+    </div>
+    
+
+    <div class="p1">
+        <p>2</p>
+    </div>
+    
+    
+    
+    
+    <div class="element-grid" id="e3">
+            <p class="ordnungszah" id="e3o"></p>
+            <p class="masse" id="e3m"></p>
+            <p class="element" id="e3i"></p>
+            <p class="name" id="e3n"></p>
+            <p class="anzahl" id="e3a"></p>
+            <button class="plus" id="e3+" onclick="add(3)">
+            </button>
+            <button class="minus" id="e3-" onclick="reduce(3)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e4">
+            <p class="ordnungszah" id="e4o"></p>
+            <p class="masse" id="e4m"></p>
+            <p class="element" id="e4i"></p>
+            <p class="name" id="e4n"></p>
+            <p class="anzahl" id="e4a"></p>
+            <button class="plus" id="e4+" onclick="add(4)">
+            </button>
+            <button class="minus" id="e4-" onclick="reduce(4)"></button>
+    </div>
+    <div class="n2"><br></div>
+    
+    <div class="element-grid" id="e5">
+            <p class="ordnungszah" id="e5o"></p>
+            <p class="masse" id="e5m"></p>
+            <p class="element" id="e5i"></p>
+            <p class="name" id="e5n"></p>
+            <p class="anzahl" id="e5a"></p>
+            <button class="plus" id="e5+" onclick="add(5)">
+            </button>
+            <button class="minus" id="e5-" onclick="reduce(5)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e6">
+            <p class="ordnungszah" id="e6o"></p>
+            <p class="masse" id="e6m"></p>
+            <p class="element" id="e6i"></p>
+            <p class="name" id="e6n"></p>
+            <p class="anzahl" id="e6a"></p>
+            <button class="plus" id="e6+" onclick="add(6)">
+            </button>
+            <button class="minus" id="e6-" onclick="reduce(6)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e7">
+            <p class="ordnungszah" id="e7o"></p>
+            <p class="masse" id="e7m"></p>
+            <p class="element" id="e7i"></p>
+            <p class="name" id="e7n"></p>
+            <p class="anzahl" id="e7a"></p>
+            <button class="plus" id="e7+" onclick="add(7)">
+            </button>
+            <button class="minus" id="e7-" onclick="reduce(7)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e8">
+            <p class="ordnungszah" id="e8o"></p>
+            <p class="masse" id="e8m"></p>
+            <p class="element" id="e8i"></p>
+            <p class="name" id="e8n"></p>
+            <p class="anzahl" id="e8a"></p>
+            <button class="plus" id="e8+" onclick="add(8)">
+            </button>
+            <button class="minus" id="e8-" onclick="reduce(8)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e9">
+            <p class="ordnungszah" id="e9o"></p>
+            <p class="masse" id="e9m"></p>
+            <p class="element" id="e9i"></p>
+            <p class="name" id="e9n"></p>
+            <p class="anzahl" id="e9a"></p>
+            <button class="plus" id="e9+" onclick="add(9)">
+            </button>
+            <button class="minus" id="e9-" onclick="reduce(9)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e10">
+            <p class="ordnungszah" id="e10o"></p>
+            <p class="masse" id="e10m"></p>
+            <p class="element" id="e10i"></p>
+            <p class="name" id="e10n"></p>
+            <p class="anzahl" id="e10a"></p>
+            <button class="plus" id="e10+" onclick="add(10)">
+            </button>
+            <button class="minus" id="e10-" onclick="reduce(10)"></button>
+    </div>
+    <div class="p2">
+        <p>3</p>
+    </div>
+        
+    <div class="element-grid" id="e11">
+            <p class="ordnungszah" id="e11o"></p>
+            <p class="masse" id="e11m"></p>
+            <p class="element" id="e11i"></p>
+            <p class="name" id="e11n"></p>
+            <p class="anzahl" id="e11a"></p>
+            <button class="plus" id="e11+" onclick="add(11)">
+            </button>
+            <button class="minus" id="e11-" onclick="reduce(11)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e12">
+            <p class="ordnungszah" id="e12o"></p>
+            <p class="masse" id="e12m"></p>
+            <p class="element" id="e12i"></p>
+            <p class="name" id="e12n"></p>
+            <p class="anzahl" id="e12a"></p>
+            <button class="plus" id="e12+" onclick="add(12)">
+            </button>
+            <button class="minus" id="e12-" onclick="reduce(12)"></button>
+    </div>
+    <div class="n3"><br></div>
+    
+    
+    <div class="element-grid" id="e13">
+            <p class="ordnungszah" id="e13o"></p>
+            <p class="masse" id="e13m"></p>
+            <p class="element" id="e13i"></p>
+            <p class="name" id="e13n"></p>
+            <p class="anzahl" id="e13a"></p>
+            <button class="plus" id="e13+" onclick="add(13)">
+            </button>
+            <button class="minus" id="e13-" onclick="reduce(13)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e14">
+            <p class="ordnungszah" id="e14o"></p>
+            <p class="masse" id="e14m"></p>
+            <p class="element" id="e14i"></p>
+            <p class="name" id="e14n"></p>
+            <p class="anzahl" id="e14a"></p>
+            <button class="plus" id="e14+" onclick="add(14)">
+            </button>
+            <button class="minus" id="e14-" onclick="reduce(14)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e15">
+            <p class="ordnungszah" id="e15o"></p>
+            <p class="masse" id="e15m"></p>
+            <p class="element" id="e15i"></p>
+            <p class="name" id="e15n"></p>
+            <p class="anzahl" id="e15a"></p>
+            <button class="plus" id="e15+" onclick="add(15)">
+            </button>
+            <button class="minus" id="e15-" onclick="reduce(15)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e16">
+            <p class="ordnungszah" id="e16o"></p>
+            <p class="masse" id="e16m"></p>
+            <p class="element" id="e16i"></p>
+            <p class="name" id="e16n"></p>
+            <p class="anzahl" id="e16a"></p>
+            <button class="plus" id="e16+" onclick="add(16)">
+            </button>
+            <button class="minus" id="e16-" onclick="reduce(16)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e17">
+            <p class="ordnungszah" id="e17o"></p>
+            <p class="masse" id="e17m"></p>
+            <p class="element" id="e17i"></p>
+            <p class="name" id="e17n"></p>
+            <p class="anzahl" id="e17a"></p>
+            <button class="plus" id="e17+" onclick="add(17)">
+            </button>
+            <button class="minus" id="e17-" onclick="reduce(17)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e18">
+            <p class="ordnungszah" id="e18o"></p>
+            <p class="masse" id="e18m"></p>
+            <p class="element" id="e18i"></p>
+            <p class="name" id="e18n"></p>
+            <p class="anzahl" id="e18a"></p>
+            <button class="plus" id="e18+" onclick="add(18)">
+            </button>
+            <button class="minus" id="e18-" onclick="reduce(18)"></button>
+    </div>
+    <div class="p3">
+        <p>4</p>
+    </div>
+        
+    <div class="element-grid" id="e19">
+            <p class="ordnungszah" id="e19o"></p>
+            <p class="masse" id="e19m"></p>
+            <p class="element" id="e19i"></p>
+            <p class="name" id="e19n"></p>
+            <p class="anzahl" id="e19a"></p>
+            <button class="plus" id="e19+" onclick="add(19)">
+            </button>
+            <button class="minus" id="e19-" onclick="reduce(19)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e20">
+            <p class="ordnungszah" id="e20o"></p>
+            <p class="masse" id="e20m"></p>
+            <p class="element" id="e20i"></p>
+            <p class="name" id="e20n"></p>
+            <p class="anzahl" id="e20a"></p>
+            <button class="plus" id="e20+" onclick="add(20)">
+            </button>
+            <button class="minus" id="e20-" onclick="reduce(20)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e21">
+            <p class="ordnungszah" id="e21o"></p>
+            <p class="masse" id="e21m"></p>
+            <p class="element" id="e21i"></p>
+            <p class="name" id="e21n"></p>
+            <p class="anzahl" id="e21a"></p>
+            <button class="plus" id="e21+" onclick="add(21)">
+            </button>
+            <button class="minus" id="e21-" onclick="reduce(21)"></button>
+    </div>
+    <div class="n4"><br></div>
+    
+    
+    <div class="element-grid" id="e22">
+            <p class="ordnungszah" id="e22o"></p>
+            <p class="masse" id="e22m"></p>
+            <p class="element" id="e22i"></p>
+            <p class="name" id="e22n"></p>
+            <p class="anzahl" id="e22a"></p>
+            <button class="plus" id="e22+" onclick="add(22)">
+            </button>
+            <button class="minus" id="e22-" onclick="reduce(22)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e23">
+            <p class="ordnungszah" id="e23o"></p>
+            <p class="masse" id="e23m"></p>
+            <p class="element" id="e23i"></p>
+            <p class="name" id="e23n"></p>
+            <p class="anzahl" id="e23a"></p>
+            <button class="plus" id="e23+" onclick="add(23)">
+            </button>
+            <button class="minus" id="e23-" onclick="reduce(23)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e24">
+            <p class="ordnungszah" id="e24o"></p>
+            <p class="masse" id="e24m"></p>
+            <p class="element" id="e24i"></p>
+            <p class="name" id="e24n"></p>
+            <p class="anzahl" id="e24a"></p>
+            <button class="plus" id="e24+" onclick="add(24)">
+            </button>
+            <button class="minus" id="e24-" onclick="reduce(24)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e25">
+            <p class="ordnungszah" id="e25o"></p>
+            <p class="masse" id="e25m"></p>
+            <p class="element" id="e25i"></p>
+            <p class="name" id="e25n"></p>
+            <p class="anzahl" id="e25a"></p>
+            <button class="plus" id="e25+" onclick="add(25)">
+            </button>
+            <button class="minus" id="e25-" onclick="reduce(25)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e26">
+            <p class="ordnungszah" id="e26o"></p>
+            <p class="masse" id="e26m"></p>
+            <p class="element" id="e26i"></p>
+            <p class="name" id="e26n"></p>
+            <p class="anzahl" id="e26a"></p>
+            <button class="plus" id="e26+" onclick="add(26)">
+            </button>
+            <button class="minus" id="e26-" onclick="reduce(26)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e27">
+            <p class="ordnungszah" id="e27o"></p>
+            <p class="masse" id="e27m"></p>
+            <p class="element" id="e27i"></p>
+            <p class="name" id="e27n"></p>
+            <p class="anzahl" id="e27a"></p>
+            <button class="plus" id="e27+" onclick="add(27)">
+            </button>
+            <button class="minus" id="e27-" onclick="reduce(27)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e28">
+            <p class="ordnungszah" id="e28o"></p>
+            <p class="masse" id="e28m"></p>
+            <p class="element" id="e28i"></p>
+            <p class="name" id="e28n"></p>
+            <p class="anzahl" id="e28a"></p>
+            <button class="plus" id="e28+" onclick="add(28)">
+            </button>
+            <button class="minus" id="e28-" onclick="reduce(28)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e29">
+            <p class="ordnungszah" id="e29o"></p>
+            <p class="masse" id="e29m"></p>
+            <p class="element" id="e29i"></p>
+            <p class="name" id="e29n"></p>
+            <p class="anzahl" id="e29a"></p>
+            <button class="plus" id="e29+" onclick="add(29)">
+            </button>
+            <button class="minus" id="e29-" onclick="reduce(29)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e30">
+            <p class="ordnungszah" id="e30o"></p>
+            <p class="masse" id="e30m"></p>
+            <p class="element" id="e30i"></p>
+            <p class="name" id="e30n"></p>
+            <p class="anzahl" id="e30a"></p>
+            <button class="plus" id="e30+" onclick="add(30)">
+            </button>
+            <button class="minus" id="e30-" onclick="reduce(30)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e31">
+            <p class="ordnungszah" id="e31o"></p>
+            <p class="masse" id="e31m"></p>
+            <p class="element" id="e31i"></p>
+            <p class="name" id="e31n"></p>
+            <p class="anzahl" id="e31a"></p>
+            <button class="plus" id="e31+" onclick="add(31)">
+            </button>
+            <button class="minus" id="e31-" onclick="reduce(31)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e32">
+            <p class="ordnungszah" id="e32o"></p>
+            <p class="masse" id="e32m"></p>
+            <p class="element" id="e32i"></p>
+            <p class="name" id="e32n"></p>
+            <p class="anzahl" id="e32a"></p>
+            <button class="plus" id="e32+" onclick="add(32)">
+            </button>
+            <button class="minus" id="e32-" onclick="reduce(32)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e33">
+            <p class="ordnungszah" id="e33o"></p>
+            <p class="masse" id="e33m"></p>
+            <p class="element" id="e33i"></p>
+            <p class="name" id="e33n"></p>
+            <p class="anzahl" id="e33a"></p>
+            <button class="plus" id="e33+" onclick="add(33)">
+            </button>
+            <button class="minus" id="e33-" onclick="reduce(33)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e34">
+            <p class="ordnungszah" id="e34o"></p>
+            <p class="masse" id="e34m"></p>
+            <p class="element" id="e34i"></p>
+            <p class="name" id="e34n"></p>
+            <p class="anzahl" id="e34a"></p>
+            <button class="plus" id="e34+" onclick="add(34)">
+            </button>
+            <button class="minus" id="e34-" onclick="reduce(34)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e35">
+            <p class="ordnungszah" id="e35o"></p>
+            <p class="masse" id="e35m"></p>
+            <p class="element" id="e35i"></p>
+            <p class="name" id="e35n"></p>
+            <p class="anzahl" id="e35a"></p>
+            <button class="plus" id="e35+" onclick="add(35)">
+            </button>
+            <button class="minus" id="e35-" onclick="reduce(35)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e36">
+            <p class="ordnungszah" id="e36o"></p>
+            <p class="masse" id="e36m"></p>
+            <p class="element" id="e36i"></p>
+            <p class="name" id="e36n"></p>
+            <p class="anzahl" id="e36a"></p>
+            <button class="plus" id="e36+" onclick="add(36)">
+            </button>
+            <button class="minus" id="e36-" onclick="reduce(36)"></button>
+    </div>
+    <div class="p4">
+        <p>5</p>
+    </div>
+        
+    <div class="element-grid" id="e37">
+            <p class="ordnungszah" id="e37o"></p>
+            <p class="masse" id="e37m"></p>
+            <p class="element" id="e37i"></p>
+            <p class="name" id="e37n"></p>
+            <p class="anzahl" id="e37a"></p>
+            <button class="plus" id="e37+" onclick="add(37)">
+            </button>
+            <button class="minus" id="e37-" onclick="reduce(37)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e38">
+            <p class="ordnungszah" id="e38o"></p>
+            <p class="masse" id="e38m"></p>
+            <p class="element" id="e38i"></p>
+            <p class="name" id="e38n"></p>
+            <p class="anzahl" id="e38a"></p>
+            <button class="plus" id="e38+" onclick="add(38)">
+            </button>
+            <button class="minus" id="e38-" onclick="reduce(38)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e39">
+            <p class="ordnungszah" id="e39o"></p>
+            <p class="masse" id="e39m"></p>
+            <p class="element" id="e39i"></p>
+            <p class="name" id="e39n"></p>
+            <p class="anzahl" id="e39a"></p>
+            <button class="plus" id="e39+" onclick="add(39)">
+            </button>
+            <button class="minus" id="e39-" onclick="reduce(39)"></button>
+    </div>
+    <div class="n5"><p>Lanthanoide und Actinoide</p></div>
+    
+    <div class="element-grid" id="e40">
+            <p class="ordnungszah" id="e40o"></p>
+            <p class="masse" id="e40m"></p>
+            <p class="element" id="e40i"></p>
+            <p class="name" id="e40n"></p>
+            <p class="anzahl" id="e40a"></p>
+            <button class="plus" id="e40+" onclick="add(40)">
+            </button>
+            <button class="minus" id="e40-" onclick="reduce(40)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e41">
+            <p class="ordnungszah" id="e41o"></p>
+            <p class="masse" id="e41m"></p>
+            <p class="element" id="e41i"></p>
+            <p class="name" id="e41n"></p>
+            <p class="anzahl" id="e41a"></p>
+            <button class="plus" id="e41+" onclick="add(41)">
+            </button>
+            <button class="minus" id="e41-" onclick="reduce(41)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e42">
+            <p class="ordnungszah" id="e42o"></p>
+            <p class="masse" id="e42m"></p>
+            <p class="element" id="e42i"></p>
+            <p class="name" id="e42n"></p>
+            <p class="anzahl" id="e42a"></p>
+            <button class="plus" id="e42+" onclick="add(42)">
+            </button>
+            <button class="minus" id="e42-" onclick="reduce(42)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e43">
+            <p class="ordnungszah" id="e43o"></p>
+            <p class="masse" id="e43m"></p>
+            <p class="element" id="e43i"></p>
+            <p class="name" id="e43n"></p>
+            <p class="anzahl" id="e43a"></p>
+            <button class="plus" id="e43+" onclick="add(43)">
+            </button>
+            <button class="minus" id="e43-" onclick="reduce(43)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e44">
+            <p class="ordnungszah" id="e44o"></p>
+            <p class="masse" id="e44m"></p>
+            <p class="element" id="e44i"></p>
+            <p class="name" id="e44n"></p>
+            <p class="anzahl" id="e44a"></p>
+            <button class="plus" id="e44+" onclick="add(44)">
+            </button>
+            <button class="minus" id="e44-" onclick="reduce(44)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e45">
+            <p class="ordnungszah" id="e45o"></p>
+            <p class="masse" id="e45m"></p>
+            <p class="element" id="e45i"></p>
+            <p class="name" id="e45n"></p>
+            <p class="anzahl" id="e45a"></p>
+            <button class="plus" id="e45+" onclick="add(45)">
+            </button>
+            <button class="minus" id="e45-" onclick="reduce(45)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e46">
+            <p class="ordnungszah" id="e46o"></p>
+            <p class="masse" id="e46m"></p>
+            <p class="element" id="e46i"></p>
+            <p class="name" id="e46n"></p>
+            <p class="anzahl" id="e46a"></p>
+            <button class="plus" id="e46+" onclick="add(46)">
+            </button>
+            <button class="minus" id="e46-" onclick="reduce(46)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e47">
+            <p class="ordnungszah" id="e47o"></p>
+            <p class="masse" id="e47m"></p>
+            <p class="element" id="e47i"></p>
+            <p class="name" id="e47n"></p>
+            <p class="anzahl" id="e47a"></p>
+            <button class="plus" id="e47+" onclick="add(47)">
+            </button>
+            <button class="minus" id="e47-" onclick="reduce(47)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e48">
+            <p class="ordnungszah" id="e48o"></p>
+            <p class="masse" id="e48m"></p>
+            <p class="element" id="e48i"></p>
+            <p class="name" id="e48n"></p>
+            <p class="anzahl" id="e48a"></p>
+            <button class="plus" id="e48+" onclick="add(48)">
+            </button>
+            <button class="minus" id="e48-" onclick="reduce(48)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e49">
+            <p class="ordnungszah" id="e49o"></p>
+            <p class="masse" id="e49m"></p>
+            <p class="element" id="e49i"></p>
+            <p class="name" id="e49n"></p>
+            <p class="anzahl" id="e49a"></p>
+            <button class="plus" id="e49+" onclick="add(49)">
+            </button>
+            <button class="minus" id="e49-" onclick="reduce(49)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e50">
+            <p class="ordnungszah" id="e50o"></p>
+            <p class="masse" id="e50m"></p>
+            <p class="element" id="e50i"></p>
+            <p class="name" id="e50n"></p>
+            <p class="anzahl" id="e50a"></p>
+            <button class="plus" id="e50+" onclick="add(50)">
+            </button>
+            <button class="minus" id="e50-" onclick="reduce(50)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e51">
+            <p class="ordnungszah" id="e51o"></p>
+            <p class="masse" id="e51m"></p>
+            <p class="element" id="e51i"></p>
+            <p class="name" id="e51n"></p>
+            <p class="anzahl" id="e51a"></p>
+            <button class="plus" id="e51+" onclick="add(51)">
+            </button>
+            <button class="minus" id="e51-" onclick="reduce(51)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e52">
+            <p class="ordnungszah" id="e52o"></p>
+            <p class="masse" id="e52m"></p>
+            <p class="element" id="e52i"></p>
+            <p class="name" id="e52n"></p>
+            <p class="anzahl" id="e52a"></p>
+            <button class="plus" id="e52+" onclick="add(52)">
+            </button>
+            <button class="minus" id="e52-" onclick="reduce(52)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e53">
+            <p class="ordnungszah" id="e53o"></p>
+            <p class="masse" id="e53m"></p>
+            <p class="element" id="e53i"></p>
+            <p class="name" id="e53n"></p>
+            <p class="anzahl" id="e53a"></p>
+            <button class="plus" id="e53+" onclick="add(53)">
+            </button>
+            <button class="minus" id="e53-" onclick="reduce(53)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e54">
+            <p class="ordnungszah" id="e54o"></p>
+            <p class="masse" id="e54m"></p>
+            <p class="element" id="e54i"></p>
+            <p class="name" id="e54n"></p>
+            <p class="anzahl" id="e54a"></p>
+            <button class="plus" id="e54+" onclick="add(54)">
+            </button>
+            <button class="minus" id="e54-" onclick="reduce(54)"></button>
+    </div>
+    <div class="p5">
+        <p>6</p>
+    </div>
+    
+    <div class="element-grid" id="e55">
+            <p class="ordnungszah" id="e55o"></p>
+            <p class="masse" id="e55m"></p>
+            <p class="element" id="e55i"></p>
+            <p class="name" id="e55n"></p>
+            <p class="anzahl" id="e55a"></p>
+            <button class="plus" id="e55+" onclick="add(55)">
+            </button>
+            <button class="minus" id="e55-" onclick="reduce(55)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e56">
+            <p class="ordnungszah" id="e56o"></p>
+            <p class="masse" id="e56m"></p>
+            <p class="element" id="e56i"></p>
+            <p class="name" id="e56n"></p>
+            <p class="anzahl" id="e56a"></p>
+            <button class="plus" id="e56+" onclick="add(56)">
+            </button>
+            <button class="minus" id="e56-" onclick="reduce(56)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e57">
+            <p class="ordnungszah" id="e57o"></p>
+            <p class="masse" id="e57m"></p>
+            <p class="element" id="e57i"></p>
+            <p class="name" id="e57n"></p>
+            <p class="anzahl" id="e57a"></p>
+            <button class="plus" id="e57+" onclick="add(57)">
+            </button>
+            <button class="minus" id="e57-" onclick="reduce(57)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e58">
+            <p class="ordnungszah" id="e58o"></p>
+            <p class="masse" id="e58m"></p>
+            <p class="element" id="e58i"></p>
+            <p class="name" id="e58n"></p>
+            <p class="anzahl" id="e58a"></p>
+            <button class="plus" id="e58+" onclick="add(58)">
+            </button>
+            <button class="minus" id="e58-" onclick="reduce(58)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e59">
+            <p class="ordnungszah" id="e59o"></p>
+            <p class="masse" id="e59m"></p>
+            <p class="element" id="e59i"></p>
+            <p class="name" id="e59n"></p>
+            <p class="anzahl" id="e59a"></p>
+            <button class="plus" id="e59+" onclick="add(59)">
+            </button>
+            <button class="minus" id="e59-" onclick="reduce(59)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e60">
+            <p class="ordnungszah" id="e60o"></p>
+            <p class="masse" id="e60m"></p>
+            <p class="element" id="e60i"></p>
+            <p class="name" id="e60n"></p>
+            <p class="anzahl" id="e60a"></p>
+            <button class="plus" id="e60+" onclick="add(60)">
+            </button>
+            <button class="minus" id="e60-" onclick="reduce(60)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e61">
+            <p class="ordnungszah" id="e61o"></p>
+            <p class="masse" id="e61m"></p>
+            <p class="element" id="e61i"></p>
+            <p class="name" id="e61n"></p>
+            <p class="anzahl" id="e61a"></p>
+            <button class="plus" id="e61+" onclick="add(61)">
+            </button>
+            <button class="minus" id="e61-" onclick="reduce(61)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e62">
+            <p class="ordnungszah" id="e62o"></p>
+            <p class="masse" id="e62m"></p>
+            <p class="element" id="e62i"></p>
+            <p class="name" id="e62n"></p>
+            <p class="anzahl" id="e62a"></p>
+            <button class="plus" id="e62+" onclick="add(62)">
+            </button>
+            <button class="minus" id="e62-" onclick="reduce(62)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e63">
+            <p class="ordnungszah" id="e63o"></p>
+            <p class="masse" id="e63m"></p>
+            <p class="element" id="e63i"></p>
+            <p class="name" id="e63n"></p>
+            <p class="anzahl" id="e63a"></p>
+            <button class="plus" id="e63+" onclick="add(63)">
+            </button>
+            <button class="minus" id="e63-" onclick="reduce(63)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e64">
+            <p class="ordnungszah" id="e64o"></p>
+            <p class="masse" id="e64m"></p>
+            <p class="element" id="e64i"></p>
+            <p class="name" id="e64n"></p>
+            <p class="anzahl" id="e64a"></p>
+            <button class="plus" id="e64+" onclick="add(64)">
+            </button>
+            <button class="minus" id="e64-" onclick="reduce(64)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e65">
+            <p class="ordnungszah" id="e65o"></p>
+            <p class="masse" id="e65m"></p>
+            <p class="element" id="e65i"></p>
+            <p class="name" id="e65n"></p>
+            <p class="anzahl" id="e65a"></p>
+            <button class="plus" id="e65+" onclick="add(65)">
+            </button>
+            <button class="minus" id="e65-" onclick="reduce(65)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e66">
+            <p class="ordnungszah" id="e66o"></p>
+            <p class="masse" id="e66m"></p>
+            <p class="element" id="e66i"></p>
+            <p class="name" id="e66n"></p>
+            <p class="anzahl" id="e66a"></p>
+            <button class="plus" id="e66+" onclick="add(66)">
+            </button>
+            <button class="minus" id="e66-" onclick="reduce(66)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e67">
+            <p class="ordnungszah" id="e67o"></p>
+            <p class="masse" id="e67m"></p>
+            <p class="element" id="e67i"></p>
+            <p class="name" id="e67n"></p>
+            <p class="anzahl" id="e67a"></p>
+            <button class="plus" id="e67+" onclick="add(67)">
+            </button>
+            <button class="minus" id="e67-" onclick="reduce(67)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e68">
+            <p class="ordnungszah" id="e68o"></p>
+            <p class="masse" id="e68m"></p>
+            <p class="element" id="e68i"></p>
+            <p class="name" id="e68n"></p>
+            <p class="anzahl" id="e68a"></p>
+            <button class="plus" id="e68+" onclick="add(68)">
+            </button>
+            <button class="minus" id="e68-" onclick="reduce(68)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e69">
+            <p class="ordnungszah" id="e69o"></p>
+            <p class="masse" id="e69m"></p>
+            <p class="element" id="e69i"></p>
+            <p class="name" id="e69n"></p>
+            <p class="anzahl" id="e69a"></p>
+            <button class="plus" id="e69+" onclick="add(69)">
+            </button>
+            <button class="minus" id="e69-" onclick="reduce(69)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e70">
+            <p class="ordnungszah" id="e70o"></p>
+            <p class="masse" id="e70m"></p>
+            <p class="element" id="e70i"></p>
+            <p class="name" id="e70n"></p>
+            <p class="anzahl" id="e70a"></p>
+            <button class="plus" id="e70+" onclick="add(70)">
+            </button>
+            <button class="minus" id="e70-" onclick="reduce(70)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e71">
+            <p class="ordnungszah" id="e71o"></p>
+            <p class="masse" id="e71m"></p>
+            <p class="element" id="e71i"></p>
+            <p class="name" id="e71n"></p>
+            <p class="anzahl" id="e71a"></p>
+            <button class="plus" id="e71+" onclick="add(71)">
+            </button>
+            <button class="minus" id="e71-" onclick="reduce(71)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e72">
+            <p class="ordnungszah" id="e72o"></p>
+            <p class="masse" id="e72m"></p>
+            <p class="element" id="e72i"></p>
+            <p class="name" id="e72n"></p>
+            <p class="anzahl" id="e72a"></p>
+            <button class="plus" id="e72+" onclick="add(72)">
+            </button>
+            <button class="minus" id="e72-" onclick="reduce(72)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e73">
+            <p class="ordnungszah" id="e73o"></p>
+            <p class="masse" id="e73m"></p>
+            <p class="element" id="e73i"></p>
+            <p class="name" id="e73n"></p>
+            <p class="anzahl" id="e73a"></p>
+            <button class="plus" id="e73+" onclick="add(73)">
+            </button>
+            <button class="minus" id="e73-" onclick="reduce(73)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e74">
+            <p class="ordnungszah" id="e74o"></p>
+            <p class="masse" id="e74m"></p>
+            <p class="element" id="e74i"></p>
+            <p class="name" id="e74n"></p>
+            <p class="anzahl" id="e74a"></p>
+            <button class="plus" id="e74+" onclick="add(74)">
+            </button>
+            <button class="minus" id="e74-" onclick="reduce(74)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e75">
+            <p class="ordnungszah" id="e75o"></p>
+            <p class="masse" id="e75m"></p>
+            <p class="element" id="e75i"></p>
+            <p class="name" id="e75n"></p>
+            <p class="anzahl" id="e75a"></p>
+            <button class="plus" id="e75+" onclick="add(75)">
+            </button>
+            <button class="minus" id="e75-" onclick="reduce(75)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e76">
+            <p class="ordnungszah" id="e76o"></p>
+            <p class="masse" id="e76m"></p>
+            <p class="element" id="e76i"></p>
+            <p class="name" id="e76n"></p>
+            <p class="anzahl" id="e76a"></p>
+            <button class="plus" id="e76+" onclick="add(76)">
+            </button>
+            <button class="minus" id="e76-" onclick="reduce(76)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e77">
+            <p class="ordnungszah" id="e77o"></p>
+            <p class="masse" id="e77m"></p>
+            <p class="element" id="e77i"></p>
+            <p class="name" id="e77n"></p>
+            <p class="anzahl" id="e77a"></p>
+            <button class="plus" id="e77+" onclick="add(77)">
+            </button>
+            <button class="minus" id="e77-" onclick="reduce(77)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e78">
+            <p class="ordnungszah" id="e78o"></p>
+            <p class="masse" id="e78m"></p>
+            <p class="element" id="e78i"></p>
+            <p class="name" id="e78n"></p>
+            <p class="anzahl" id="e78a"></p>
+            <button class="plus" id="e78+" onclick="add(78)">
+            </button>
+            <button class="minus" id="e78-" onclick="reduce(78)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e79">
+            <p class="ordnungszah" id="e79o"></p>
+            <p class="masse" id="e79m"></p>
+            <p class="element" id="e79i"></p>
+            <p class="name" id="e79n"></p>
+            <p class="anzahl" id="e79a"></p>
+            <button class="plus" id="e79+" onclick="add(79)">
+            </button>
+            <button class="minus" id="e79-" onclick="reduce(79)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e80">
+            <p class="ordnungszah" id="e80o"></p>
+            <p class="masse" id="e80m"></p>
+            <p class="element" id="e80i"></p>
+            <p class="name" id="e80n"></p>
+            <p class="anzahl" id="e80a"></p>
+            <button class="plus" id="e80+" onclick="add(80)">
+            </button>
+            <button class="minus" id="e80-" onclick="reduce(80)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e81">
+            <p class="ordnungszah" id="e81o"></p>
+            <p class="masse" id="e81m"></p>
+            <p class="element" id="e81i"></p>
+            <p class="name" id="e81n"></p>
+            <p class="anzahl" id="e81a"></p>
+            <button class="plus" id="e81+" onclick="add(81)">
+            </button>
+            <button class="minus" id="e81-" onclick="reduce(81)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e82">
+            <p class="ordnungszah" id="e82o"></p>
+            <p class="masse" id="e82m"></p>
+            <p class="element" id="e82i"></p>
+            <p class="name" id="e82n"></p>
+            <p class="anzahl" id="e82a"></p>
+            <button class="plus" id="e82+" onclick="add(82)">
+            </button>
+            <button class="minus" id="e82-" onclick="reduce(82)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e83">
+            <p class="ordnungszah" id="e83o"></p>
+            <p class="masse" id="e83m"></p>
+            <p class="element" id="e83i"></p>
+            <p class="name" id="e83n"></p>
+            <p class="anzahl" id="e83a"></p>
+            <button class="plus" id="e83+" onclick="add(83)">
+            </button>
+            <button class="minus" id="e83-" onclick="reduce(83)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e84">
+            <p class="ordnungszah" id="e84o"></p>
+            <p class="masse" id="e84m"></p>
+            <p class="element" id="e84i"></p>
+            <p class="name" id="e84n"></p>
+            <p class="anzahl" id="e84a"></p>
+            <button class="plus" id="e84+" onclick="add(84)">
+            </button>
+            <button class="minus" id="e84-" onclick="reduce(84)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e85">
+            <p class="ordnungszah" id="e85o"></p>
+            <p class="masse" id="e85m"></p>
+            <p class="element" id="e85i"></p>
+            <p class="name" id="e85n"></p>
+            <p class="anzahl" id="e85a"></p>
+            <button class="plus" id="e85+" onclick="add(85)">
+            </button>
+            <button class="minus" id="e85-" onclick="reduce(85)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e86">
+            <p class="ordnungszah" id="e86o"></p>
+            <p class="masse" id="e86m"></p>
+            <p class="element" id="e86i"></p>
+            <p class="name" id="e86n"></p>
+            <p class="anzahl" id="e86a"></p>
+            <button class="plus" id="e86+" onclick="add(86)">
+            </button>
+            <button class="minus" id="e86-" onclick="reduce(86)"></button>
+    </div>
+    <div class="p6">
+        <p>7</p>
+    </div>
+    
+        
+    
+    <div class="element-grid" id="e87">
+            <p class="ordnungszah" id="e87o"></p>
+            <p class="masse" id="e87m"></p>
+            <p class="element" id="e87i"></p>
+            <p class="name" id="e87n"></p>
+            <p class="anzahl" id="e87a"></p>
+            <button class="plus" id="e87+" onclick="add(87)">
+            </button>
+            <button class="minus" id="e87-" onclick="reduce(87)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e88">
+            <p class="ordnungszah" id="e88o"></p>
+            <p class="masse" id="e88m"></p>
+            <p class="element" id="e88i"></p>
+            <p class="name" id="e88n"></p>
+            <p class="anzahl" id="e88a"></p>
+            <button class="plus" id="e88+" onclick="add(88)">
+            </button>
+            <button class="minus" id="e88-" onclick="reduce(88)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e89">
+            <p class="ordnungszah" id="e89o"></p>
+            <p class="masse" id="e89m"></p>
+            <p class="element" id="e89i"></p>
+            <p class="name" id="e89n"></p>
+            <p class="anzahl" id="e89a"></p>
+            <button class="plus" id="e89+" onclick="add(89)">
+            </button>
+            <button class="minus" id="e89-" onclick="reduce(89)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e90">
+            <p class="ordnungszah" id="e90o"></p>
+            <p class="masse" id="e90m"></p>
+            <p class="element" id="e90i"></p>
+            <p class="name" id="e90n"></p>
+            <p class="anzahl" id="e90a"></p>
+            <button class="plus" id="e90+" onclick="add(90)">
+            </button>
+            <button class="minus" id="e90-" onclick="reduce(90)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e91">
+            <p class="ordnungszah" id="e91o"></p>
+            <p class="masse" id="e91m"></p>
+            <p class="element" id="e91i"></p>
+            <p class="name" id="e91n"></p>
+            <p class="anzahl" id="e91a"></p>
+            <button class="plus" id="e91+" onclick="add(91)">
+            </button>
+            <button class="minus" id="e91-" onclick="reduce(91)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e92">
+            <p class="ordnungszah" id="e92o"></p>
+            <p class="masse" id="e92m"></p>
+            <p class="element" id="e92i"></p>
+            <p class="name" id="e92n"></p>
+            <p class="anzahl" id="e92a"></p>
+            <button class="plus" id="e92+" onclick="add(92)">
+            </button>
+            <button class="minus" id="e92-" onclick="reduce(92)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e93">
+            <p class="ordnungszah" id="e93o"></p>
+            <p class="masse" id="e93m"></p>
+            <p class="element" id="e93i"></p>
+            <p class="name" id="e93n"></p>
+            <p class="anzahl" id="e93a"></p>
+            <button class="plus" id="e93+" onclick="add(93)">
+            </button>
+            <button class="minus" id="e93-" onclick="reduce(93)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e94">
+            <p class="ordnungszah" id="e94o"></p>
+            <p class="masse" id="e94m"></p>
+            <p class="element" id="e94i"></p>
+            <p class="name" id="e94n"></p>
+            <p class="anzahl" id="e94a"></p>
+            <button class="plus" id="e94+" onclick="add(94)">
+            </button>
+            <button class="minus" id="e94-" onclick="reduce(94)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e95">
+            <p class="ordnungszah" id="e95o"></p>
+            <p class="masse" id="e95m"></p>
+            <p class="element" id="e95i"></p>
+            <p class="name" id="e95n"></p>
+            <p class="anzahl" id="e95a"></p>
+            <button class="plus" id="e95+" onclick="add(95)">
+            </button>
+            <button class="minus" id="e95-" onclick="reduce(95)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e96">
+            <p class="ordnungszah" id="e96o"></p>
+            <p class="masse" id="e96m"></p>
+            <p class="element" id="e96i"></p>
+            <p class="name" id="e96n"></p>
+            <p class="anzahl" id="e96a"></p>
+            <button class="plus" id="e96+" onclick="add(96)">
+            </button>
+            <button class="minus" id="e96-" onclick="reduce(96)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e97">
+            <p class="ordnungszah" id="e97o"></p>
+            <p class="masse" id="e97m"></p>
+            <p class="element" id="e97i"></p>
+            <p class="name" id="e97n"></p>
+            <p class="anzahl" id="e97a"></p>
+            <button class="plus" id="e97+" onclick="add(97)">
+            </button>
+            <button class="minus" id="e97-" onclick="reduce(97)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e98">
+            <p class="ordnungszah" id="e98o"></p>
+            <p class="masse" id="e98m"></p>
+            <p class="element" id="e98i"></p>
+            <p class="name" id="e98n"></p>
+            <p class="anzahl" id="e98a"></p>
+            <button class="plus" id="e98+" onclick="add(98)">
+            </button>
+            <button class="minus" id="e98-" onclick="reduce(98)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e99">
+            <p class="ordnungszah" id="e99o"></p>
+            <p class="masse" id="e99m"></p>
+            <p class="element" id="e99i"></p>
+            <p class="name" id="e99n"></p>
+            <p class="anzahl" id="e99a"></p>
+            <button class="plus" id="e99+" onclick="add(99)">
+            </button>
+            <button class="minus" id="e99-" onclick="reduce(99)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e100">
+            <p class="ordnungszah" id="e100o"></p>
+            <p class="masse" id="e100m"></p>
+            <p class="element" id="e100i"></p>
+            <p class="name" id="e100n"></p>
+            <p class="anzahl" id="e100a"></p>
+            <button class="plus" id="e100+" onclick="add(100)">
+            </button>
+            <button class="minus" id="e100-" onclick="reduce(100)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e101">
+            <p class="ordnungszah" id="e101o"></p>
+            <p class="masse" id="e101m"></p>
+            <p class="element" id="e101i"></p>
+            <p class="name" id="e101n"></p>
+            <p class="anzahl" id="e101a"></p>
+            <button class="plus" id="e101+" onclick="add(101)">
+            </button>
+            <button class="minus" id="e101-" onclick="reduce(101)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e102">
+            <p class="ordnungszah" id="e102o"></p>
+            <p class="masse" id="e102m"></p>
+            <p class="element" id="e102i"></p>
+            <p class="name" id="e102n"></p>
+            <p class="anzahl" id="e102a"></p>
+            <button class="plus" id="e102+" onclick="add(102)">
+            </button>
+            <button class="minus" id="e102-" onclick="reduce(102)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e103">
+            <p class="ordnungszah" id="e103o"></p>
+            <p class="masse" id="e103m"></p>
+            <p class="element" id="e103i"></p>
+            <p class="name" id="e103n"></p>
+            <p class="anzahl" id="e103a"></p>
+            <button class="plus" id="e103+" onclick="add(103)">
+            </button>
+            <button class="minus" id="e103-" onclick="reduce(103)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e104">
+            <p class="ordnungszah" id="e104o"></p>
+            <p class="masse" id="e104m"></p>
+            <p class="element" id="e104i"></p>
+            <p class="name" id="e104n"></p>
+            <p class="anzahl" id="e104a"></p>
+            <button class="plus" id="e104+" onclick="add(104)">
+            </button>
+            <button class="minus" id="e104-" onclick="reduce(104)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e105">
+            <p class="ordnungszah" id="e105o"></p>
+            <p class="masse" id="e105m"></p>
+            <p class="element" id="e105i"></p>
+            <p class="name" id="e105n"></p>
+            <p class="anzahl" id="e105a"></p>
+            <button class="plus" id="e105+" onclick="add(105)">
+            </button>
+            <button class="minus" id="e105-" onclick="reduce(105)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e106">
+            <p class="ordnungszah" id="e106o"></p>
+            <p class="masse" id="e106m"></p>
+            <p class="element" id="e106i"></p>
+            <p class="name" id="e106n"></p>
+            <p class="anzahl" id="e106a"></p>
+            <button class="plus" id="e106+" onclick="add(106)">
+            </button>
+            <button class="minus" id="e106-" onclick="reduce(106)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e107">
+            <p class="ordnungszah" id="e107o"></p>
+            <p class="masse" id="e107m"></p>
+            <p class="element" id="e107i"></p>
+            <p class="name" id="e107n"></p>
+            <p class="anzahl" id="e107a"></p>
+            <button class="plus" id="e107+" onclick="add(107)">
+            </button>
+            <button class="minus" id="e107-" onclick="reduce(107)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e108">
+            <p class="ordnungszah" id="e108o"></p>
+            <p class="masse" id="e108m"></p>
+            <p class="element" id="e108i"></p>
+            <p class="name" id="e108n"></p>
+            <p class="anzahl" id="e108a"></p>
+            <button class="plus" id="e108+" onclick="add(108)">
+            </button>
+            <button class="minus" id="e108-" onclick="reduce(108)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e109">
+            <p class="ordnungszah" id="e109o"></p>
+            <p class="masse" id="e109m"></p>
+            <p class="element" id="e109i"></p>
+            <p class="name" id="e109n"></p>
+            <p class="anzahl" id="e109a"></p>
+            <button class="plus" id="e109+" onclick="add(109)">
+            </button>
+            <button class="minus" id="e109-" onclick="reduce(109)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e110">
+            <p class="ordnungszah" id="e110o"></p>
+            <p class="masse" id="e110m"></p>
+            <p class="element" id="e110i"></p>
+            <p class="name" id="e110n"></p>
+            <p class="anzahl" id="e110a"></p>
+            <button class="plus" id="e110+" onclick="add(110)">
+            </button>
+            <button class="minus" id="e110-" onclick="reduce(110)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e111">
+            <p class="ordnungszah" id="e111o"></p>
+            <p class="masse" id="e111m"></p>
+            <p class="element" id="e111i"></p>
+            <p class="name" id="e111n"></p>
+            <p class="anzahl" id="e111a"></p>
+            <button class="plus" id="e111+" onclick="add(111)">
+            </button>
+            <button class="minus" id="e111-" onclick="reduce(111)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e112">
+            <p class="ordnungszah" id="e112o"></p>
+            <p class="masse" id="e112m"></p>
+            <p class="element" id="e112i"></p>
+            <p class="name" id="e112n"></p>
+            <p class="anzahl" id="e112a"></p>
+            <button class="plus" id="e112+" onclick="add(112)">
+            </button>
+            <button class="minus" id="e112-" onclick="reduce(112)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e113">
+            <p class="ordnungszah" id="e113o"></p>
+            <p class="masse" id="e113m"></p>
+            <p class="element" id="e113i"></p>
+            <p class="name" id="e113n"></p>
+            <p class="anzahl" id="e113a"></p>
+            <button class="plus" id="e113+" onclick="add(113)">
+            </button>
+            <button class="minus" id="e113-" onclick="reduce(113)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e114">
+            <p class="ordnungszah" id="e114o"></p>
+            <p class="masse" id="e114m"></p>
+            <p class="element" id="e114i"></p>
+            <p class="name" id="e114n"></p>
+            <p class="anzahl" id="e114a"></p>
+            <button class="plus" id="e114+" onclick="add(114)">
+            </button>
+            <button class="minus" id="e114-" onclick="reduce(114)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e115">
+            <p class="ordnungszah" id="e115o"></p>
+            <p class="masse" id="e115m"></p>
+            <p class="element" id="e115i"></p>
+            <p class="name" id="e115n"></p>
+            <p class="anzahl" id="e115a"></p>
+            <button class="plus" id="e115+" onclick="add(115)">
+            </button>
+            <button class="minus" id="e115-" onclick="reduce(115)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e116">
+            <p class="ordnungszah" id="e116o"></p>
+            <p class="masse" id="e116m"></p>
+            <p class="element" id="e116i"></p>
+            <p class="name" id="e116n"></p>
+            <p class="anzahl" id="e116a"></p>
+            <button class="plus" id="e116+" onclick="add(116)">
+            </button>
+            <button class="minus" id="e116-" onclick="reduce(116)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e117">
+            <p class="ordnungszah" id="e117o"></p>
+            <p class="masse" id="e117m"></p>
+            <p class="element" id="e117i"></p>
+            <p class="name" id="e117n"></p>
+            <p class="anzahl" id="e117a"></p>
+            <button class="plus" id="e117+" onclick="add(117)">
+            </button>
+            <button class="minus" id="e117-" onclick="reduce(117)"></button>
+    </div>
+    
+    
+    <div class="element-grid" id="e118">
+            <p class="ordnungszah" id="e118o"></p>
+            <p class="masse" id="e118m"></p>
+            <p class="element" id="e118i"></p>
+            <p class="name" id="e118n"></p>
+            <p class="anzahl" id="e118a"></p>
+            <button class="plus" id="e118+" onclick="add(118)">
+            </button>
+            <button class="minus" id="e118-" onclick="reduce(118)"></button>
+    </div>
+
+
+
+
+    </div>
+</body>
