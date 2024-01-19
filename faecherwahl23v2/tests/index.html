@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF bearbeiten und herunterladen</title>
+  <!-- Lade die pdf-lib-Bibliothek -->
+  <script type="module">
+    import { PDFDocument, rgb } from 'https://cdn.jsdelivr.net/npm/pdf-lib@1.16.0';
+
+    async function loadAndModifyPDF() {
+      // Lade die vorhandene PDF-Datei
+      const pdfBytes = await fetch('Hi.pdf').then(res => res.arrayBuffer());
+      
+      // Öffne das PDF-Dokument
+      const pdfDoc = await PDFDocument.load(pdfBytes);
+
+      // Füge den vorher gespeicherten Namen an einer festgelegten Position ein
+      const name = "Max Mustermann";
+      const page = pdfDoc.getPage(0); // Ändere die Seitenzahl nach Bedarf
+      const { width, height } = page.getSize();
+      page.drawText(name, { x: 50, y: height - 50, fontColor: rgb(0, 0, 0) });
+
+      // Male ein Kreuz an einer vorher festgelegten Stelle (z. B. x=50, y=60)
+      const crossSize = 10;
+      page.drawLine({
+        start: { x: 50 - crossSize, y: 60 - crossSize },
+        end: { x: 50 + crossSize, y: 60 + crossSize },
+        thickness: 1,
+        color: rgb(0, 0, 0),
+      });
+      page.drawLine({
+        start: { x: 50 - crossSize, y: 60 + crossSize },
+        end: { x: 50 + crossSize, y: 60 - crossSize },
+        thickness: 1,
+        color: rgb(0, 0, 0),
+      });
+
+      // Speichere die modifizierte PDF-Datei ab
+      const modifiedPdfBytes = await pdfDoc.save();
+
+      // Erzeuge einen Blob und erstelle einen Download-Link
+      const blob = new Blob([modifiedPdfBytes], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+
+      // Füge einen Download-Link zur Webseite hinzu
+      const downloadLink = document.createElement('a');
+      downloadLink.href = url;
+      downloadLink.download = 'modified_output.pdf';
+      downloadLink.textContent = 'Download PDF';
+      document.body.appendChild(downloadLink);
+    }
+
+    loadAndModifyPDF();
+  </script>
+</head>
+<body>
+</body>
+</html>
