@@ -16,6 +16,7 @@
 .name {
     grid-area: name;
     background-color: rgba(230, 230, 230, 0.8);
+    margin: 16px;
     border-radius: 2px;
 }
 
