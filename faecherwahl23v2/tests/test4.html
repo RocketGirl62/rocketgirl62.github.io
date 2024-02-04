@@ -14,8 +14,8 @@
     
     <!--Scripts-->
     
-    <script src="https://unpkg.com/pdf-lib"></script>
-    <script src="tst.js"></script>
+    <script src="pdf-lib/dist/pdf-lib.js"></script>
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
     
     
 </head>
@@ -23,7 +23,7 @@
 <body>
     <button class="printbutton button1" onclick="modifyPdf()" id="printbutton">PDF herunterladen</button>
     <script>
-        const { PDFDocument } = PDFLib
+       
         function draw_text_to_pdf(name, location_x, location_y, firstPage, helveticaFont, rgb) {
             firstPage.drawText(name, {
                 x: location_x,
@@ -33,6 +33,7 @@
                 color: rgb(0, 0, 0)
             })
         }
+        var PDFDocument = PDFLib.PDFDocument
         var rgb = PDFLib.rgb
         var StandardFonts = PDFLib.StandardFonts
         var degrees = PDFLib.degrees
