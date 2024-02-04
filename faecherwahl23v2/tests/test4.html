@@ -22,6 +22,7 @@
 <body>
     <button class="printbutton button1" onclick="modifyPdf()" id="printbutton">PDF herunterladen</button>
     <script>
+        import { PDFDocument } from 'pdf-lib'
         function draw_text_to_pdf(name, location_x, location_y, firstPage, helveticaFont, rgb) {
             firstPage.drawText(name, {
                 x: location_x,
