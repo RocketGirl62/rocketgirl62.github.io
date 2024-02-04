@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <button class="printbutton button1" onclick="modifyPdf()" id="printbutton">PDF herunterladen</button>
+    <button onclick="modifyPdf()" >PDF herunterladen</button>
+    <button onclick="modifyPdf2()" >PDF 2 herunterladen</button>
     <script>
        
         function draw_text_to_pdf(name, location_x, location_y, firstPage, helveticaFont, rgb) {
@@ -59,6 +60,32 @@
 
             const pdfBytes = await pdfDoc.save()
             download(pdfBytes, "Wahlen_QP_" + firstname + "_" + lastname + ".pdf", "application/pdf")
+        }
+        async function modifyPdf2() {
+            const url = 'test 1.pdf'
+            const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+
+            const pdfDoc = await PDFDocument.load(existingPdfBytes)
+            const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
+
+            const pages = pdfDoc.getPages()
+            const firstPage = pages[0]
+            const {
+                width,
+                height
+            } = firstPage.getSize()
+            const form = pdfDoc.getForm()
+
+            const nameField = form.getTextField('name')
+            nameField.setText('Hello, World!')
+            const click = form.getRadioGroup('click')
+            click.select('Value_getg');
+            //draw_text_to_pdf(firstname, 135, height - 80, firstPage, helveticaFont, rgb)
+            //draw_text_to_pdf(lastname, 320, height - 80, firstPage, helveticaFont, rgb)
+
+
+            const pdfBytes = await pdfDoc.save()
+            download(pdfBytes, "test.pdf", "application/pdf")
         }
     </script>
 </body>
