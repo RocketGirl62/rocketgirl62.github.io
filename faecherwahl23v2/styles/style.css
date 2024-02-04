@@ -2,6 +2,7 @@
 html {
     /* Festlegen der Schriftart für die gesamte Website*/
     font-family: 'Rubik', sans-serif; /*Vielleicht hier noch eine andere?*/
+    border-radius: 4px;
 }
 
 /* Hintergrund*/
