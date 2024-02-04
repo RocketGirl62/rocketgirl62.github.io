@@ -110,9 +110,10 @@
             //draw_text_to_pdf(firstname, 135, height - 80, firstPage, helveticaFont, rgb)
             //draw_text_to_pdf(lastname, 320, height - 80, firstPage, helveticaFont, rgb)
 
-
+            form.updateFieldAppearances();
+            form.flatten(); // Flache die Formularfelder
             const pdfBytes = await pdfDoc.save()
-            printJS(pdfBytes)
+            download(pdfBytes, "test.pdf", "application/pdf")
         }
     </script>
 </body>
