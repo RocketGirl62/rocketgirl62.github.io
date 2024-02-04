@@ -112,6 +112,7 @@
 
             form.updateFieldAppearances();
             form.flatten(); // Flache die Formularfelder
+            //RadioButtons sind so nicht mehr sichtbar!!! -> einfach X schreiben, wo die Kreuze hin müssen
             const pdfBytes = await pdfDoc.save()
             download(pdfBytes, "test.pdf", "application/pdf")
         }
