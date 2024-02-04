@@ -88,7 +88,7 @@
             const pdfBytes = await pdfDoc.save()
             download(pdfBytes, "test.pdf", "application/pdf")
         }
-        async function modifyPdf2() {
+        async function modifyPdf3() {
             const url = 'test 1.pdf'
             const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
