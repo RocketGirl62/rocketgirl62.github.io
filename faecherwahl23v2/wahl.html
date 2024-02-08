@@ -32,14 +32,10 @@
 </head>
 
 <body class="bg" onload="starting();cookieproove(); showName('name');electionMain()">
-    <div class="top">
-        <!--Hier muss dann das Grid usw. hin-->
-
-        
-    </div>
+    
     <div class="grid-container">
         <p class="name" id="name">Guest</p>
-        <p class="infoTaskfields"></p>
+        <p class="infoTaskfields" id="infoTaskfields"></p>
         <button class="reset" type="button" onclick="resetSpalte(0);electionMain()">Alles zurücksetzen</button>
         <button class="continue" id="continue" disabled="true" onclick="window.location = 'wahl2.html'" >Weiter</button>
         <button class="p0Reset" id="p0Reset" disabled="true" onclick="resetSpalte(0);electionMain()">Zurücksetzen P1</button>

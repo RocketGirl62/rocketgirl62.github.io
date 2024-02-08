@@ -20,35 +20,25 @@ function cookieproove() {
         */
     }
     //Fürs erste
+    //--> Ich benutze eigentlich nichtmal cookies, alles landet im sessionstorage
      
 }
 
 //Namen setzen
-/*function setName(){
+function setName(){
     cookieproove();
     console.log("hello World");
     sessionStorage.setItem('firstName', document.getElementById('firstName').value);
     console.log(sessionStorage.getItem('firstName'));
     sessionStorage.setItem('lastName', document.getElementById('firstName').value);
-}*/
+}
 
 //Name anzeigen
 function showName(fieldID){
     var el = document.getElementById(fieldID);
     el.textContent = sessionStorage.getItem('firstName') + " " + sessionStorage.getItem('lastName');
 }
-//Der folgende Code ist vom alten Projekt --> muss noch modifiziert werden
-function url() { 
-    let url = window.location.href
-    let params = (new URL(url).searchParams)
 
-    //document.getElementById("name").value = params.get('firstname') + " " + params.get('lastname')
-
-    params.set('hallo', 'byby')
-
-    sessionStorage.setItem('firstName', params.get('firstName'))
-    sessionStorage.setItem('lastName', params.get('lastName'))
-}
 
 
 //Informationstext zeigen

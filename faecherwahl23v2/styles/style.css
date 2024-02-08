@@ -2,7 +2,7 @@
 html {
     /* Festlegen der Schriftart für die gesamte Website*/
     font-family: 'Rubik', sans-serif; /*Vielleicht hier noch eine andere?*/
-    border-radius: 4px;
+    
 }
 
 /* Hintergrund*/
@@ -19,6 +19,8 @@ html {
     color: #f7f7f7;
     margin: 10px 0px 0px 0px;
     padding: 20px 0px 20px 0px;
+
+    border-radius: 4px;
 }
 
 .impressum {
@@ -32,6 +34,14 @@ html {
 }
 .invisible {
     display: none;
+}
+
+/*Buttons*/
+button {
+    background-color: rgb(205, 241, 255);
+    margin: 5px 0;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 /*Style für die Coookie Box*/

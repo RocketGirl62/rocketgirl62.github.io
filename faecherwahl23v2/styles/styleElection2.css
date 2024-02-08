@@ -15,10 +15,15 @@
 /*Grid*/
 .name {
     grid-area: name;
+    background-color: rgba(230, 230, 230, 0.8);
+    margin: 0px;
+    padding: 16px;
+    border-radius: 4px;
 }
 
 .pflicht {
     grid-area: pflicht;
+    border-radius: 4px;
 }
 .resetP {
     grid-area: resetP;
@@ -116,8 +121,9 @@
     'b5 b6 b7 n n'
     'infoElection infoElection infoElection infoElection infoElection';
   gap: 10px;
-  background-color: #2196F3;
+  background-color: #308ce2;
   padding: 10px;
+    border-radius: 4px;
 }
 
 .grid-container > div {
@@ -125,6 +131,7 @@
   text-align: left;
   padding: 10px 10px;
   /*font-size: 30px;*/
+    border-radius: 4px;
 }
 
 h3 {
@@ -133,6 +140,7 @@ h3 {
 button {
     background-color: #82e2fc;
     margin: 5px 0;
+    border-radius: 4px;
 }
 
 .visible{

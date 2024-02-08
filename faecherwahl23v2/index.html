@@ -23,12 +23,12 @@
 <body class="bg" onload="starting();cookieproove()">
     <div class="nameInput">
         <p>Fächerwahl für die Qualifikationsphase</p>
-        <form action="information.html" method="get" >
+        <form action="information.html" method="post" >
             <input id="firstName" type="text" name="firstName" placeholder="Vorname">
             <p></p> <!--Abstandshalter/Zeilenumbruch-->
             <input id="lastName" type="text" name="lastName" placeholder="Nachname">
             <p></p>
-            <input id="continueName" type="submit" onclick="allowed(), url()" value="Weiter" >
+            <input id="continueName" type="submit" onclick="allowed(), setName()" value="Weiter" >
             <!--onclick="setName(), allowed()"  href="information.html"-->
             <!--<button id="continueName" onclick="allowed(), setName()" href="information.html">Weiter</button>-->
         </form>

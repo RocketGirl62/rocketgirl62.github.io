@@ -324,12 +324,18 @@ function loadeA(p){
     let elem = document.getElementById("p"+p+"Reset");
     elem.disabled = false;
 
-    var kernfaecherAnzahl = 0;
+    var kernfaecherAnzahl = 0; // Hier muss bissl anders gezählt werden
+    var fremd = false;
     for (let i = 0; i < p; i++){ //Kernfächer zählen
+        //console.log(subjects[selectedP[i]].kindOfSubject);
         if (subjects[selectedP[i]].kernfach == true){
+            if (fremd && subjects[selectedP[i]].kindOfSubject == 1) kernfaecherAnzahl--;
+            if (subjects[selectedP[i]].kindOfSubject == 1)fremd = true;
             kernfaecherAnzahl ++;
         }
     }
+    console.log("kernis");
+    console.log(kernfaecherAnzahl);
     var fehltB = false;
     if (selectedTaskfields[1]=="0"){
         fehltB = true;
@@ -424,9 +430,9 @@ function loadeA(p){
             //Hier muss jetzt geprüft werden, ob eine der Bedingungen auf 
             //console.log(bedingungen);
             for (let k = 0; k < bedingungen.length; k++){
-                console.log("bedingungen");
-                console.log(bedingungen);
-                console.log(bedingungen[0]);
+                //console.log("bedingungen");
+                //console.log(bedingungen);
+                //console.log(bedingungen[0]);
                 if (bedingungen[0] == -1){
                     var bedingungen2 = [];
                     for (let l = 0; l < taskfields.length; l++){
@@ -434,14 +440,14 @@ function loadeA(p){
                             bedingungen2.push(l);
                         }
                     }
-                    console.log(-1 + " "+ fehltB);
-                    console.log(kernfaecherAnzahl);
+                    //console.log(-1 + " "+ fehltB);
+                    //console.log(kernfaecherAnzahl);
                     if (fehltB){
-                        console.log("erg " + (2 - kernfaecherAnzahl == 4 - p));
+                        //console.log("erg " + (2 - kernfaecherAnzahl == 4 - p));
                         if (2 - kernfaecherAnzahl == 4 - p){ //Es wurden noch nicht alle Kernfächer gewählt und auf allen restlichen Positionen müssen Kernfächer liegen
                             
                             if (subjects[i].kernfach == false && subjects[i].taskfield != 1){
-                                console.log("break");
+                                //console.log("break");
                                 break;
                             }
                         }
@@ -499,8 +505,9 @@ function loadeA(p){
         
         }
         
-
     }
+    showTaskfields (p);
+    
 }
 
 
@@ -533,6 +540,7 @@ function selectP(p, subjectIndex){
     setKindOfSubjects(selectedKindOfSubjects);
     setP(selectedP);
     setTaskfields(selectedTaskfields);
+    showTaskfields (p+1);
 
 }
 
@@ -543,13 +551,13 @@ function selectP(p, subjectIndex){
 function chooseProfil(p, subject){ //subject ist hier ein objekt
     //Diese Funktion ist dafür da, die möglichen Profile einzuschränken
     var selectedProfiles = getProfiles();
-    console.log(selectedProfiles.length);
+    //console.log(selectedProfiles.length);
     for (let i = 0; i < selectedProfiles.length; i++){ //Jedes Profil durchgehen
         if (selectedProfiles[i] == "1"){
             let found = false;
-            console.log(i);
-            console.log(profiles[i].name);
-            console.log(profiles[i].kindOfSubject[p]);
+            //console.log(i);
+            //console.log(profiles[i].name);
+            //console.log(profiles[i].kindOfSubject[p]);
             for (let j = 0; j < profiles[i].kindOfSubject[p].length; j++){
                 if (containsSubjectProfil(subject, profiles[i].kindOfSubject[p][j])){
                     found = true;
@@ -627,15 +635,22 @@ function loadgA(p){
     var selectedTaskfields = getTaskfields();
     var selectedP = getP();
     var selectedKindOfSubjects = getKindOfSubject();
-    var kernfaecherAnzahl = 0;
+    
     var bedingungen = [];
     let elem = document.getElementById("p"+p+"Reset");
     elem.disabled = false;
+    var kernfaecherAnzahl = 0; // Hier muss bissl anders gezählt werden
+    var fremd = false;
     for (let i = 0; i < p; i++){ //Kernfächer zählen
+        //console.log(subjects[selectedP[i]].kindOfSubject);
         if (subjects[selectedP[i]].kernfach == true){
+            if (fremd && subjects[selectedP[i]].kindOfSubject == 1) kernfaecherAnzahl--;
+            if (subjects[selectedP[i]].kindOfSubject == 1)fremd = true;
             kernfaecherAnzahl ++;
         }
     }
+    console.log("kernis");
+    console.log(kernfaecherAnzahl);
     var fehltB = false;
     if (selectedTaskfields[1]=="0"){
         fehltB = true;
@@ -663,8 +678,8 @@ function loadgA(p){
         }
 
         //Wenn noch nichts gesellschaftliches gewählt wurde
-        console.log(p + " "+ fehltB);
-        console.log((2 - kernfaecherAnzahl) +" "+ (4 - p));
+        //console.log(p + " "+ fehltB);
+        //console.log((2 - kernfaecherAnzahl) +" "+ (4 - p));
         if (fehltB){
             if (2 - kernfaecherAnzahl == 4 - p){ //Es wurden noch nicht alle Kernfächer gewählt und auf allen restlichen Positionen müssen Kernfächer liegen
                 
@@ -696,6 +711,14 @@ function loadgA(p){
         resetButton("button"+p+"_"+i);
         showButton("button"+p+"_"+i, subjects[i].name, true);
     }
+    //Sport und Erdkunde gehen nicht zusammen:
+    //console.log("Erd");
+    //console.log(selectedSubjects[10]);
+    if (selectedSubjects[10]==1){
+        resetButton("button"+p+"_"+18);
+        showButton("button"+p+"_"+18, subjects[18].name, false);
+        console.log("Disable sport");
+    }
     
     /*
     - Jetzt muss ich alle Aufgabenbereiche
@@ -705,6 +728,7 @@ function loadgA(p){
     und ggf. nicht erfüllt werden können, darf ich nur
     Kernfächer freischalten
     */
+    showTaskfields (p);
 }
 
 //P4
@@ -1100,7 +1124,7 @@ function clickBox (box, buttonIndex) {
 
 
     var boxType = parseInt(showingBoxes[box]);
-    console.log(boxType);
+    //console.log(boxType);
     var cnt = 0;
     if (boxType == 18){
         for (let i = 0; i < subjects.length; i++) {
@@ -1186,17 +1210,17 @@ function clickBox (box, buttonIndex) {
         }
 
     } else if (boxType == 5 || boxType == 9){
-        console.log("yes");
+        //console.log("yes");
         if (buttonIndex == 0){
             let elem = document.getElementById("button"+box+"_0");
             elem.disabled = true;
             elem.classList.add("selected");
             elem.classList.remove("selectable");
-            console.log("yes");
+            //console.log("yes");
             if (boxType == 5){
                 selectedSubjects[10] = 1;
                 selectedKindOfSubjects[5] = 1;
-                console.log("yes");
+                //console.log("yes");
             } else {
                 selectedSubjects[17] = 1;
                 selectedKindOfSubjects[9] = 1;
@@ -1366,7 +1390,32 @@ function loadShow(){
 
 }
 
+function showTaskfields (p){
+    var field = document.getElementById("infoTaskfields");
+    var txt = "Kernfächer: ";
+    var selectedTaskfields = getTaskfields();
+    var selectedTaskfields = getTaskfields();
+    var selectedP = getP();
 
+    var kernfaecherAnzahl = 0;
+    var fremd = false;
+    for (let i = 0; i < p; i++){ //Kernfächer zählen
+        //console.log(subjects[selectedP[i]].kindOfSubject);
+        if (subjects[selectedP[i]].kernfach == true){
+            if (fremd && subjects[selectedP[i]].kindOfSubject == 1) kernfaecherAnzahl--;
+            if (subjects[selectedP[i]].kindOfSubject == 1)fremd = true;
+            kernfaecherAnzahl ++;
+        }
+    }
+    txt += kernfaecherAnzahl;
+    for (let i = 0; i< 3;i++){
+        txt+=", Bereich "+taskfields[i].shortName+": ";
+        txt+= selectedTaskfields[i];
+    }
+    console.log(txt);
+    field.textContent = txt;
+
+}
 
 
 
@@ -1375,10 +1424,10 @@ To Do:
 
 - das mit dem zurücksetzen fixen -> done
 - die geschichte mit dem gessellschaftlichen und und den kernfächern in den prüfungsfächern -> habe es schon versucht, jetzt fehlt noch p3
-- alle Texte ändern
-- halbwegs ansehbares Design schreiben
+- alle Texte ändern -> done
+- halbwegs ansehbares Design schreiben -> done
 - ausdrucken
-- informatik in den abdeckern done
+- informatik in den abdeckern -> done
 - zurücksetzen und neu laden in den abdeckern
 - anzeigen von den bereichen und kernfächern
 
