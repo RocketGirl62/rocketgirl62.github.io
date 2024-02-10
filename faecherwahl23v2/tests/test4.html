@@ -24,6 +24,7 @@
     <button onclick="modifyPdf()" >PDF herunterladen</button>
     <button onclick="modifyPdf2()" >PDF 2 herunterladen</button>
     <button onclick="modifyPdf3()" >PDF 2 drucken</button>
+    <button onclick="modifyPdf4()" >PDF 2.2 drucken</button>
     <script>
        
         function draw_text_to_pdf(name, location_x, location_y, firstPage, helveticaFont, rgb) {
@@ -116,7 +117,7 @@
             const pdfBytes = await pdfDoc.save()
             download(pdfBytes, "test.pdf", "application/pdf")
         }
-        async function modifyPdf3() {
+        async function modifyPdf4() {
             const url = 'test 2.pdf'
             const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
