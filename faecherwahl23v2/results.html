@@ -79,6 +79,7 @@
                 //Prüfungsfächer:
                 var p = getArray(sessionStorage.getItem('pf'));
                 for (let i  = 0;  i < 5; i++){
+                    if (i==0&&sessionStorage.getItem('profil')=='Gese')continue;
                     if(i < 3){
                         const eA = form.getTextField(p[i]+"_eA")
                         eA.setText('X');
