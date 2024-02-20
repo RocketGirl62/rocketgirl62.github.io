@@ -1450,7 +1450,7 @@ function prepFile(){
     let txt = "";
     for (let i = 0;i < 5; i++){
         txt+= subjects[selectedP[i]].name.name;
-        if (i < 3) selectedSubjects[selectP[i]]="0";
+        if (i < 3) selectedSubjects[parseInt(selectP[i])]="0";
         if (i < 4)txt+=";";
     }
     sessionStorage.setItem('pf',txt);
@@ -1460,9 +1460,10 @@ function prepFile(){
     for (let i = 0;i < selectedSubjects.length; i++){
         if (selectedSubjects[i]=="1"){
             txt+= subjects[i].name;
+            txt+=";";
         }
     
-        if (i < selectedSubjects.length-1)txt+=";";
+        
     }
     sessionStorage.setItem('gA',txt);
     console.log(txt);
