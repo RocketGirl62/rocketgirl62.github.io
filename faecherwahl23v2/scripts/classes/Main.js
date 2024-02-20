@@ -1469,7 +1469,7 @@ function prepFile(){
     console.log(txt);
     //In 12 belegen
     var in12 = getIn12();
-    sessionStorage.setItem('inJ12',subjects[in12].name);
+    sessionStorage.setItem('inJ12',subjects[parseInt(in12)].name);
     console.log(sessionStorage.getItem('inJ12'));
 }
 
