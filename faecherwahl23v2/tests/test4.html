@@ -142,7 +142,6 @@
             //draw_text_to_pdf(firstname, 135, height - 80, firstPage, helveticaFont, rgb)
             //draw_text_to_pdf(lastname, 320, height - 80, firstPage, helveticaFont, rgb)
 
-           
             //RadioButtons sind so nicht mehr sichtbar!!! -> einfach X schreiben, wo die Kreuze hin müssen
             const pdfBytes = await pdfDoc.save()
             download(pdfBytes, "test.pdf", "application/pdf")
