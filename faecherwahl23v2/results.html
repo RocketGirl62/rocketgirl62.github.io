@@ -96,8 +96,10 @@
 
                 //In 12 belegen
                 var in12 = sessionStorage.getItem('inJ12');
-                const inJ12 = form.getTextField(in12+'_12');
-                inJ12.setText('X');
+                if (in12 != '-1'){
+                    const inJ12 = form.getTextField(in12+'_12');
+                    inJ12.setText('X');
+                }
 
                 //PDF drucken
                 form.updateFieldAppearances();
