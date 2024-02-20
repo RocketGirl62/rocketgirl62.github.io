@@ -1445,6 +1445,7 @@ function prepFile(){
             sessionStorage.setItem('profil', profiles[i].file);
         }
     }
+    console.log(sessionStorage.getItem('profil'));
     //Prüfungfächer
     let txt = "";
     for (let i = 0;i < 5; i++){
@@ -1453,6 +1454,7 @@ function prepFile(){
         if (i < 4)txt+=";";
     }
     sessionStorage.setItem('pf',txt);
+    console.log(txt);
     //Grundkurse
     txt = "";
     for (let i = 0;i < selectedSubjects.length; i++){
@@ -1463,9 +1465,11 @@ function prepFile(){
         if (i < selectedSubjects.length-1)txt+=";";
     }
     sessionStorage.setItem('gA',txt);
+    console.log(txt);
     //In 12 belegen
     var in12 = getIn12();
     sessionStorage.setItem('inJ12',subjects[in12].name);
+    console.log(sessionStorage.getItem('inJ12'));
 }
 
 
