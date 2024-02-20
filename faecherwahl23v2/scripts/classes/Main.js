@@ -48,8 +48,8 @@ function resetElection(){
 	subjects.push( new Subject("Französisch", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Latein", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Spanisch", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
-	subjects.push( new Subject("Kunst", 0, 2, false, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
-	subjects.push( new Subject("Musik", 0, 2, false, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
+	subjects.push( new Subject("Kunst", 0, 2, false, true, true, [true,false,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
+	subjects.push( new Subject("Musik", 0, 2, false, true, true, [true,false,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Darstellendes Spiel", 0, 2, false, false, true, [false,false,false,false,false], 0, 0, false, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Politik-Wirtschaft", 1, 3, false, true, true, [false,false,true,true,true], 0, 0, true, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Geschichte", 1, 4, false, true, true, [true,false,true,true,true], 0, 0, true, 5, 3, 1.5, -1, -1) );
