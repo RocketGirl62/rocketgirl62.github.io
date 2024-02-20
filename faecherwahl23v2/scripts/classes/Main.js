@@ -1449,9 +1449,9 @@ function prepFile(){
     //Prüfungfächer
     let txt = "";
     for (let i = 0;i < 5; i++){
-        txt+= subjects[selectedP[i]].name.name;
-        if (i < 3) selectedSubjects[parseInt(selectP[i])]="0";
-        if (i < 4)txt+=";";
+        txt+= subjects[parseInt(selectedP[i])].name;
+        if (i < 3) selectedSubjects[parseInt(selectedP[i])]="0";
+        txt+=";";
     }
     sessionStorage.setItem('pf',txt);
     console.log(txt);
