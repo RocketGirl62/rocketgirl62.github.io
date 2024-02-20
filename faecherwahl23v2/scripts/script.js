@@ -30,7 +30,7 @@ function setName(){
     console.log("hello World");
     sessionStorage.setItem('firstName', document.getElementById('firstName').value);
     console.log(sessionStorage.getItem('firstName'));
-    sessionStorage.setItem('lastName', document.getElementById('firstName').value);
+    sessionStorage.setItem('lastName', document.getElementById('lastName').value);
 }
 
 //Name anzeigen
@@ -38,22 +38,3 @@ function showName(fieldID){
     var el = document.getElementById(fieldID);
     el.textContent = sessionStorage.getItem('firstName') + " " + sessionStorage.getItem('lastName');
 }
-
-
-
-//Informationstext zeigen
-//Das nachfolgende Funktioniert nicht und brauche ich nicht
-/*function showInformation(fieldID){
-    const fs = require('fs');
-    var el = document.getElementById(fieldID);
-    
-    
-    el.textContent = fs.readFile('information.txt', (err, inputD) => {
-    if (err) throw err;
-        console.log(inputD.toString());
-    })
-}
-
-
-import * as fs from 'fs';
-*/

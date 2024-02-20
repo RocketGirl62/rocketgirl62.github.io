@@ -23,19 +23,19 @@ function resetElection(){
     kindOfSubjects = [];
 
     //Hier muss der gernerierte Code hin
-    election = new Election( ["SprachlicherSchwerpunkt","Musisch-künstlerischerSchwerpunkt","GesellschaftswissenschaftlicherSchwerpunkt","Mathematisch-naturwissenschaftlicherSchwerpunkt"] , ["Deutsch","Fremdsprachen","künstlerisch","Politik-Wirtschaft","Geschichte","Erdkunde","Religion_WerteundNormen","Mathematik","Naturwissenschaften","Informatik","Sport"] , ["sprachlich-literarisch-künstlerisch","gesellschaftswissenschaftlich","mathematisch-naturwissenschaftlich-technisch"] , ["Deutsch","Englisch","Französisch","Latein","Spanisch","Kunst","Musik","Darstellendes-Spiel","Politik-Wirtschaft","Geschichte","Erdkunde","Religion","Werte-und-Normen","Mathematik","Physik","Chemie","Biologie","Informatik","Sport"]) ;
-	profiles.push( new Profile("SprachlicherSchwerpunkt", [[[1],[0,1]],[[1],[0,1]],[[-1]]]) );
+    election = new Election( ["Sprachlicher Schwerpunkt","Musisch-künstlerischer Schwerpunkt","Gesellschaftswissenschaftlicher Schwerpunkt","Mathematisch-naturwissenschaftlicher Schwerpunkt"] , ["Deutsch","Fremdsprachen","künstlerisch","Politik-Wirtschaft","Geschichte","Erdkunde","Religion_WerteundNormen","Mathematik","Naturwissenschaften","Informatik","Sport"] , ["sprachlich-literarisch-künstlerisch","gesellschaftswissenschaftlich","mathematisch-naturwissenschaftlich-technisch"] , ["Deutsch","Englisch","Französisch","Latein","Spanisch","Kunst","Musik","Darstellendes-Spiel","Politik-Wirtschaft","Geschichte","Erdkunde","Religion","Werte-und-Normen","Mathematik","Physik","Chemie","Biologie","Informatik","Sport"]) ;
+	profiles.push( new Profile("Sprachlicher Schwerpunkt", [[[1],[0,1]],[[1],[0,1]],[[-1]]], "Spra" ));
 	//profiles.push( new Profile("Musisch-künstlerischerSchwerpunkt", [[[2],[0,7]],[[2],[0,7]],[[-1]]]) );
-    profiles.push( new Profile("Musisch-künstlerischerSchwerpunkt", [[[2]],[[0,7]],[[-1]]]) );
-	profiles.push( new Profile("GesellschaftswissenschaftlicherSchwerpunkt", [[[4]],[[-2]],[[3]]]) );
-	profiles.push( new Profile("Mathematisch-naturwissenschaftlicherSchwerpunkt", [[[7,8],[7,8,9]],[[7,8],[7,8,9]],[[-1]]]) );
+    profiles.push( new Profile("Musisch-künstlerischer Schwerpunkt", [[[2]],[[0,7]],[[-1]]], "MuKu" ));
+	profiles.push( new Profile("Gesellschaftswissenschaftlicher Schwerpunkt", [[[4]],[[-2]],[[3,5,6]]], "Gese" ));
+	profiles.push( new Profile("Mathematisch-naturwissenschaftlicher Schwerpunkt", [[[7,8],[7,8,9]],[[7,8],[7,8,9]],[[-1]]], "MaNa"));
 	kindOfSubjects.push( new KindOfSubject("Deutsch", 1) );
 	kindOfSubjects.push( new KindOfSubject("Fremdsprachen", 1) );
 	kindOfSubjects.push( new KindOfSubject("künstlerisch", 1) );
 	kindOfSubjects.push( new KindOfSubject("Politik-Wirtschaft", 1) );
 	kindOfSubjects.push( new KindOfSubject("Geschichte", 1) );
 	kindOfSubjects.push( new KindOfSubject("Erdkunde", 0) );
-	kindOfSubjects.push( new KindOfSubject("Religion_WerteundNormen", 1) );
+	kindOfSubjects.push( new KindOfSubject("Religion/Werte und Normen", 1) );
 	kindOfSubjects.push( new KindOfSubject("Mathematik", 1) );
 	kindOfSubjects.push( new KindOfSubject("Naturwissenschaften", 1) );
 	kindOfSubjects.push( new KindOfSubject("Informatik", 0) );
@@ -43,18 +43,18 @@ function resetElection(){
 	taskfields.push( new Taskfield("sprachlich-literarisch-künstlerisch", "A", 1) );
 	taskfields.push( new Taskfield("gesellschaftswissenschaftlich", "B", 1) );
 	taskfields.push( new Taskfield("mathematisch-naturwissenschaftlich-technisch", "C", 1) );
-	subjects.push( new Subject("Deutsch", 0, 0, true, true, true, [true,true,true,true,true], 0, true, 5, 3, 1.5, 3, -1, -1) );
+	subjects.push( new Subject("Deutsch", 0, 0, true, true, true, [true,true,true,true,true], 0, 0, true, 5, 3, 1.5, 3, -1, -1) );
 	subjects.push( new Subject("Englisch", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Französisch", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Latein", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Spanisch", 0, 1, true, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Kunst", 0, 2, false, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Musik", 0, 2, false, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
-	subjects.push( new Subject("Darstellendes-Spiel", 0, 2, false, false, true, [false,false,false,false,false], 0, 0, false, 5, 3, 1.5, -1, -1) );
+	subjects.push( new Subject("Darstellendes Spiel", 0, 2, false, false, true, [false,false,false,false,false], 0, 0, false, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Politik-Wirtschaft", 1, 3, false, true, true, [false,false,true,true,true], 0, 0, true, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Geschichte", 1, 4, false, true, true, [true,false,true,true,true], 0, 0, true, 5, 3, 1.5, -1, -1) );
-	subjects.push( new Subject("Erdkunde", 1, 5, false, false, true, [false,false,false,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
-	subjects.push( new Subject("Religion", 1, 6, false, false, true, [false,false,false,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
+	subjects.push( new Subject("Erdkunde", 1, 5, false, true, true, [false,false,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );//Änderungen
+	subjects.push( new Subject("Religion", 1, 6, false, true, true, [false,false,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );//Änderungen
 	subjects.push( new Subject("Werte-und-Normen", 1, 6, false, false, true, [false,false,false,false,false], 0, 0, false, 5, 3, 1.5, -1, -1) );
 	subjects.push( new Subject("Mathematik", 2, 7, true, true, true, [true,true,true,true,true], 0, 0, true, 5, 3, 3, -1, -1) );
 	subjects.push( new Subject("Physik", 2, 8, false, true, true, [true,true,true,true,true], 0, 0, false, 5, 3, 1.5, -1, -1) );
@@ -107,7 +107,7 @@ function getArray(a){
 function initializeArray(count){
     var arr = "0";
     for (let i = 1; i < count; i ++){
-        arr += " 0";
+        arr += ";0";
     }
     return arr;
 }
@@ -197,8 +197,8 @@ function resetSpalte(spalte){
         let elem = document.getElementById("p"+i+"Reset");
         elem.disabled = true;
         for (let j = 0; j < 20; j++){
-            let elem = document.getElementById("button"+i+"_"+j); //Hier könnte was falsch sein
-            //console.log(elem);
+            let elem = document.getElementById("button"+i+"_"+j); 
+            
             elem.textContent = " ";
             elem.disabled = true;
             
@@ -212,13 +212,14 @@ function resetSpalte(spalte){
             if (elem.classList.contains("notSelectable")){
                 elem.classList.remove("notSelectable");
             } 
-            if (elem.classList.contains("selected")){
+            if (elem.classList.contains("selected")){ 
                 elem.classList.remove("selected");
                 let subjectIndex = parseInt(selectedP[i]);
                 selectedSubjects[subjectIndex] = 0;
                 selectedP[i] = 0;
+                //console.log(selectedTaskfields);
                 selectedKindOfSubjects[subjects[subjectIndex].kindOfSubject] = parseInt(selectedKindOfSubjects[subjects[subjectIndex].kindOfSubject]) - 1;
-                selectedTaskfields[subjects[subjectIndex].taskField] = parseInt(selectedTaskfields[subjects[subjectIndex].taskField]) - 1;
+                selectedTaskfields[subjects[subjectIndex].taskfield] = parseInt(selectedTaskfields[subjects[subjectIndex].taskfield]) - 1;
             }
 
         }
@@ -379,7 +380,6 @@ function loadeA(p){
             var bedingungen = []; // das sind die Bedingungnen für dieses Profil an dieser Positon auf Basis voheriger Wahlen von Fächern
             
             //Wenn es nur eine Bedingung gibt, dann kann sie sich ja nicht mit anderne überschneiden
-            //console.log(profiles[j].kindOfSubject[p]);
             if (profiles[j].kindOfSubject[p].length == 1){
                 //Prüfen, ob die Bedingung auf das Fach zutrifft
                 bedingungen = profiles[j].kindOfSubject[p][0];
@@ -686,6 +686,7 @@ function loadgA(p){
                 if (subjects[i].kernfach == false && subjects[i].taskfield != 1){
                     continue;
                 }
+                if (fremd == true&&subjects[i].kindOfSubject==1) continue;
             }
         }
 
@@ -693,6 +694,7 @@ function loadgA(p){
             if (subjects[i].kernfach == false){
                 continue;
             }
+            if (fremd == true&&subjects[i].kindOfSubject==1) continue;
         }
         if (bedingungen.length == 5-p){
         //Es wurdne noch nicht alle Aufgabenbreiche gewählt und auf allen restlichen Positionen müssen Fächer dieser Aufgabenbereiche liegen
@@ -711,13 +713,13 @@ function loadgA(p){
         resetButton("button"+p+"_"+i);
         showButton("button"+p+"_"+i, subjects[i].name, true);
     }
-    //Sport und Erdkunde gehen nicht zusammen:
+    //Sport und Erdkunde gehen nicht zusammen (außer Erdkunde wurde eA gewählt):
     //console.log("Erd");
     //console.log(selectedSubjects[10]);
-    if (selectedSubjects[10]==1){
+    if (selectedSubjects[10]==1&&selectedP[2]!="10"){
         resetButton("button"+p+"_"+18);
         showButton("button"+p+"_"+18, subjects[18].name, false);
-        console.log("Disable sport");
+        //console.log("Disable sport");
     }
     
     /*
@@ -793,26 +795,38 @@ function getIn12(){
 function abdecker(){
     var selectedSubjects = getSubjects();
     var selectedKindOfSubjects = getKindOfSubject();
-
-    //Muss noch initialisiert etc. werden
-    //var pflicht = getPflicht();
-
-
+    var selectedP = getP();
     //Erstmal alle Pflichtfächer auswählen
     pflicht = [];
-    for (let i = 0; i < subjects.length; i++){
-        if (selectedSubjects[i] == "1"){
-            continue;
+    if (sessionStorage.getItem("Pflicht")==""){
+        for (let i = 0; i < subjects.length; i++){
+            if (selectedSubjects[i] == "1"){
+                continue;
+            }
+            if (subjects[i].belegungsverpflichtung == true){
+                //Wenn gesellschaftliches Profil mit Erdkunde eA dann PoWI als Pflicht überspringen
+                if (selectedP[2]=="10"&&i==8)continue;
+                pflicht.push(i);
+                selectedSubjects[i] = "1";
+                selectedKindOfSubjects[subjects[i].kindOfSubject] = 1 + parseInt(selectedKindOfSubjects[subjects[i].kindOfSubject]);
+            }
         }
-        if (subjects[i].belegungsverpflichtung == true){
-            pflicht.push(i);
-            selectedSubjects[i] = "1";
-            selectedKindOfSubjects[subjects[i].kindOfSubject] += 1;
+    } else {
+        let pf = getPflicht();
+        for (let i = 0; i < pf.length; i++){
+            pflicht[i]=parseInt(pf[i]);
         }
     }
     //Hier müsste man es dann in die obere Leiste schreiben
     //Jetzt müsste man noch die Sachen anzeigen, bei denen man eine Wahl hat
-
+    var txt = "Pflicht: ";
+    if (pflicht.length==0)txt+="--";
+    for (let i = 0; i < pflicht.length; i++){
+        if (i > 0)txt+=", ";
+        txt += subjects[pflicht[i]].name;
+    }
+    document.getElementById("pflicht").textContent = txt;
+    
     //Hier fehlen noch die aufgerufen Methoden
     setPflicht(pflicht);
     setSubjects(selectedSubjects);
@@ -1417,6 +1431,39 @@ function showTaskfields (p){
 
 }
 
+/*
+Da ich aus der HTML nicht auf Methoden und die Klassen hier zugreifen kann, schreibe ich die
+notwendigen Dinge getrennt, in inder Form, in der ich sie brauche ins Session Storage
+*/
+function prepFile(){
+    var selectedProfiles = getProfiles();
+    var selectedSubjects = getSubjects();
+    var selectedP = getP(); 
+    //Profil für die Auswahl des PDFs
+    for (let i = 0; i < profiles.length; i++){
+        if (selectedProfiles[i]==1){
+            sessionStorage.setItem('profil', profiles[i].file);
+        }
+    }
+    //Prüfungfächer
+    let txt = "";
+    for (let i = 0;i < 5; i++){
+        txt+= subjects[selectedP[i]].name.name;
+        if (i < 3) selectedSubjects[selectP[i]]="0";
+        if (i < 4)txt+=";";
+    }
+    sessionStorage.setItem('pf',txt);
+    //Grundkurse
+    txt = "";
+    for (let i = 0;i < selectedSubjects.length; i++){
+        if (selectedSubjects[i]=="1"){
+            txt+= subjects[i].name;
+        }
+    
+        if (i < selectedSubjects.length-1)txt+=";";
+    }
+    sessionStorage.setItem('gA',txt);
+}
 
 
 /*
@@ -1429,7 +1476,7 @@ To Do:
 - ausdrucken
 - informatik in den abdeckern -> done
 - zurücksetzen und neu laden in den abdeckern
-- anzeigen von den bereichen und kernfächern
+- anzeigen von den bereichen und kernfächern -> done
 
 - p5 zurücksetzen fixen -> done
 

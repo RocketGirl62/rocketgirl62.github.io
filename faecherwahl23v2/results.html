@@ -26,20 +26,83 @@
     <script src="scripts/classes/Subject.js"></script>
     <script src="scripts/classes/Taskfield.js"></script>
 
+    <script src="pdf-lib/dist/pdf-lib.js"></script>
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+
     <script src="scripts/scriptTst.js"></script>
     <!--Responsives Design (vielleicht noch?)-->
     
 </head>
 
-<body class="bg" onload="starting();cookieproove();showName('fullName'); loadShow()">
+<body class="bg" onload="starting();cookieproove();showName('fullName'); loadShow(); prepFile()">
     <div class="top">
         <p id="fullName">Guest</p>
         <!--Hier muss dann das Grid usw. hin-->
+        <button onclick="printfile()">Wahlbogen herunterladen</button><br>
         <button onclick="window.location = 'wahl.html'">Neu wählen</button>
-        <p>Diese hier angezeigten Informationen müssen nun selbstständig auf den dem Profil entsprechenden Wahlbogen übertragen werden</p>
-        <!--<button onclick="alert('das geht noch nicht, kommt noch')">Drucken</button>-->
         
-    </div>
+        <script>
+            var PDFDocument = PDFLib.PDFDocument;
+            function getArray(a){
+                var arr = [];
+                var txt = "";
+                for (let i = 0; i<a.length; i ++){
+                    let char = a.charAt(i);
+                    if(char == ";"){
+                        arr.push(txt);
+                        txt = "";
+                    } else {
+                        txt += char;
+                    }
+                }
+                if (txt != ""){
+                    arr.push(txt);
+                }
+                //console.log(arr);
+                return arr;
+            }
+            async function printfile() {
+                //Korrektes PDF auswählen:
+                const url = 'QP_'+sessionStorage.getItem('profil')+'.pdf'; 
+                const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+
+                const pdfDoc = await PDFDocument.load(existingPdfBytes);
+                const form = pdfDoc.getForm();
+
+                //PDF ausfüllen
+                //Name:
+                const name = form.getTextField('name');
+                name.setText(sessionStorage.getItem('lastName'));
+                const firstname = form.getTextField('firstname');
+                firstname.setText(sessionStorage.getItem('firstName'));
+
+                //Prüfungsfächer:
+                var p = getArray(sessionStorage.getItem('pf'));
+                for (let i  = 0;  i < 5; i++){
+                    if(i < 3){
+                        const eA = form.getTextField(p[i]+"_eA")
+                        eA.setText('X');
+                    }
+                    const pf = form.getTextField("P"+toString(i));
+                    pf.setText(p[i]);
+                }
+
+                //Grundkurse:
+                var g = getArray(sessionStorage.getItem('gA'));
+                for (let i = 0; i < g.length; i++){
+                    const gA = form.getTextField(p[i]+"_gA");
+                    gA.setText('X');
+                }
+
+                //PDF drucken
+                form.updateFieldAppearances();
+                form.flatten(); // Flache die Formularfelder
+                const pdfBytes = await pdfDoc.save();
+                download(pdfBytes, 'QP_'+sessionStorage.getItem('profil')+'_'+sessionStorage.getItem('firstName')+'_'+sessionStorage.getItem('lastName')+".pdf", "application/pdf");
+            }
+        </script>
+        
+    
     <div class="out">
         <p class="" id="l"></p>
         <br>
@@ -73,6 +136,7 @@
         <p class="" id="l25"></p>
         
     </div>
+</div>
 
     <!--Footer? eher nicht-->
     <footer>

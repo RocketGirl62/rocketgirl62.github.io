@@ -42,5 +42,3 @@ document.getElementById('fileinput').addEventListener('change', readSingleFile, 
     document.getElementById(fieldID).textContent(txt);
 }*/
 
-
-

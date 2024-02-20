@@ -34,7 +34,7 @@
 <body class="bg" onload="starting();cookieproove(); showName('name');loadAbdecker()">
     <div class="grid-container">
         <p class="name" id="name">Guest</p>
-        <p class="pflicht"></p>
+        <p class="pflicht" id="pflicht"></p>
         <button class="reset" type="button" onclick="resetBox(0);loadNextBox(0)">Alles zurücksetzen</button>
         <button class="continue" id="continue" disabled="true" onclick="window.location = 'results.html'">Weiter</button>
         <button class="resetP" onclick="window.location = 'wahl.html'">Prüfungsfächer zurücksetzen</button>
@@ -166,8 +166,7 @@
             <p>
                 Blaue Felder sind die gewählten Fächer.<br>
                 Rote Felder können nicht gewählt werden.<br>
-                Wenn ein Fehler bei der Wahl der weiteren Grundkurse gemacht wurde, müssen die Prüfungsfächer neu gewählt werden.<br>
-                Sollte eine Box merkwürdig aussehen, müssen die Prüfungsfächer neu gewählt werden.<br>
+                Sollte eine Box oder die gesamte Seite merkwürdig aussehen, müssen die Prüfungsfächer neu gewählt werden.<br>
                 "In 12 belegen (optional)" bedeutet: Das folgende Fach wird ggf. später noch als P4- oder P5-Fach gewählt und soll daher im 12. Jahrgang belegt werden
 
 

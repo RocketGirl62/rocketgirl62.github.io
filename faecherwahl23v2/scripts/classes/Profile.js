@@ -1,10 +1,11 @@
 class Profile{
-    constructor(name, kindOfSubject){
+    constructor(name, kindOfSubject, file){
         this.name = name;
 
         //Wenn diese drei kategorien ein Dreidemensionaler array sind, würde das das glaube ich vereinfachen
         this.kindOfSubject = kindOfSubject; //Hier muss dann halt noch das richtige hin
 
+        this.file = file;
 /*
         //Fachtyp P1
         this.kindOfSubjectP1 = kindOfSubjectP1; //Hier bitte Array als Eingabe
