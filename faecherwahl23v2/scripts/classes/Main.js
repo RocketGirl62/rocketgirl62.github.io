@@ -1463,6 +1463,9 @@ function prepFile(){
         if (i < selectedSubjects.length-1)txt+=";";
     }
     sessionStorage.setItem('gA',txt);
+    //In 12 belegen
+    var in12 = getIn12();
+    sessionStorage.setItem('inJ12',subjects[in12].name);
 }
 
 

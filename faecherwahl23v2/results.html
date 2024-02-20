@@ -94,6 +94,11 @@
                     gA.setText('X');
                 }
 
+                //In 12 belegen
+                var in12 = sessionStorage.getItem('inJ12');
+                const inJ12 = form.getTextField(in12+'_12');
+                inJ12.setText('X');
+
                 //PDF drucken
                 form.updateFieldAppearances();
                 form.flatten(); // Flache die Formularfelder
