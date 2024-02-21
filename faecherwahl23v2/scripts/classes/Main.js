@@ -1044,7 +1044,7 @@ function loadNextBox(b){
 
     //Jetzt als nächsten freiwillig in 12 belegen
     
-    if (getIn12() == "0"){
+    if (getIn12() == 0){
         var options = [];
         if (profil == 0){
             options = [9, 8, 5, 6, 11, -1]
@@ -1345,9 +1345,10 @@ function resetBox(box){
                 }
                 
             }
-            showingBoxes[i] = 0;
+            
 
         }
+        showingBoxes[i] = 0;
     }
     //console.log("ja");
     
